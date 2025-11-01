@@ -1,0 +1,1255 @@
+[
+  {
+    "title": "线性图标",
+    "type": "outline",
+    "list": [
+      {
+        "name": "icon-alarm-outline",
+        "componentName": "IconAlarmOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/alarm.svg"
+      },
+      {
+        "name": "icon-app-outline",
+        "componentName": "IconAppOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/app.svg"
+      },
+      {
+        "name": "icon-arrow-down-outline",
+        "componentName": "IconArrowDownOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/arrow-down.svg"
+      },
+      {
+        "name": "icon-attachment-outline",
+        "componentName": "IconAttachmentOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/attachment.svg"
+      },
+      {
+        "name": "icon-audio-file-outline",
+        "componentName": "IconAudioFileOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/audio-file.svg"
+      },
+      {
+        "name": "icon-avatar-outline",
+        "componentName": "IconAvatarOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/avatar.svg"
+      },
+      {
+        "name": "icon-avatar2-outline",
+        "componentName": "IconAvatar2Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/avatar2.svg"
+      },
+      {
+        "name": "icon-back-outline",
+        "componentName": "IconBackOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/back.svg"
+      },
+      {
+        "name": "icon-bell-outline",
+        "componentName": "IconBellOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/bell.svg"
+      },
+      {
+        "name": "icon-bookmark-outline",
+        "componentName": "IconBookmarkOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/bookmark.svg"
+      },
+      {
+        "name": "icon-broadcast-outline",
+        "componentName": "IconBroadcastOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/broadcast.svg"
+      },
+      {
+        "name": "icon-bulb-outline",
+        "componentName": "IconBulbOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/bulb.svg"
+      },
+      {
+        "name": "icon-camera-outline",
+        "componentName": "IconCameraOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/camera.svg"
+      },
+      {
+        "name": "icon-card-outline",
+        "componentName": "IconCardOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/card.svg"
+      },
+      {
+        "name": "icon-circle-check-outline",
+        "componentName": "IconCircleCheckOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/circle-check.svg"
+      },
+      {
+        "name": "icon-circle-cross-outline",
+        "componentName": "IconCircleCrossOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/circle-cross.svg"
+      },
+      {
+        "name": "icon-circle-down-outline",
+        "componentName": "IconCircleDownOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/circle-down.svg"
+      },
+      {
+        "name": "icon-circle-left-outline",
+        "componentName": "IconCircleLeftOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/circle-left.svg"
+      },
+      {
+        "name": "icon-circle-plus-outline",
+        "componentName": "IconCirclePlusOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/circle-plus.svg"
+      },
+      {
+        "name": "icon-circle-right-outline",
+        "componentName": "IconCircleRightOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/circle-right.svg"
+      },
+      {
+        "name": "icon-circle-up-outline",
+        "componentName": "IconCircleUpOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/circle-up.svg"
+      },
+      {
+        "name": "icon-close-eye-outline",
+        "componentName": "IconCloseEyeOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/close-eye.svg"
+      },
+      {
+        "name": "icon-close-outline",
+        "componentName": "IconCloseOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/close.svg"
+      },
+      {
+        "name": "icon-clothes-outline",
+        "componentName": "IconClothesOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/clothes.svg"
+      },
+      {
+        "name": "icon-code-outline",
+        "componentName": "IconCodeOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/code.svg"
+      },
+      {
+        "name": "icon-collapse-outline",
+        "componentName": "IconCollapseOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/collapse.svg"
+      },
+      {
+        "name": "icon-comment-outline",
+        "componentName": "IconCommentOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/comment.svg"
+      },
+      {
+        "name": "icon-copy-outline",
+        "componentName": "IconCopyOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/copy.svg"
+      },
+      {
+        "name": "icon-cross-outline",
+        "componentName": "IconCrossOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/cross.svg"
+      },
+      {
+        "name": "icon-crown-outline",
+        "componentName": "IconCrownOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/crown.svg"
+      },
+      {
+        "name": "icon-cup-outline",
+        "componentName": "IconCupOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/cup.svg"
+      },
+      {
+        "name": "icon-data-outline",
+        "componentName": "IconDataOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/data.svg"
+      },
+      {
+        "name": "icon-date-outline",
+        "componentName": "IconDateOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/date.svg"
+      },
+      {
+        "name": "icon-delete-outline",
+        "componentName": "IconDeleteOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/delete.svg"
+      },
+      {
+        "name": "icon-down-outline",
+        "componentName": "IconDownOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/down.svg"
+      },
+      {
+        "name": "icon-download-outline",
+        "componentName": "IconDownloadOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/download.svg"
+      },
+      {
+        "name": "icon-download1-outline",
+        "componentName": "IconDownload1Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/download1.svg"
+      },
+      {
+        "name": "icon-emoji-outline",
+        "componentName": "IconEmojiOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/emoji.svg"
+      },
+      {
+        "name": "icon-excel-outline",
+        "componentName": "IconExcelOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/excel.svg"
+      },
+      {
+        "name": "icon-exit-outline",
+        "componentName": "IconExitOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/exit.svg"
+      },
+      {
+        "name": "icon-expand-outline",
+        "componentName": "IconExpandOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/expand.svg"
+      },
+      {
+        "name": "icon-eye-outline",
+        "componentName": "IconEyeOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/eye.svg"
+      },
+      {
+        "name": "icon-female-outline",
+        "componentName": "IconFemaleOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/female.svg"
+      },
+      {
+        "name": "icon-file-outline",
+        "componentName": "IconFileOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/file.svg"
+      },
+      {
+        "name": "icon-fill-outline",
+        "componentName": "IconFillOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/fill.svg"
+      },
+      {
+        "name": "icon-financial-outline",
+        "componentName": "IconFinancialOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/financial.svg"
+      },
+      {
+        "name": "icon-folder-close-outline",
+        "componentName": "IconFolderCloseOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/folder-close.svg"
+      },
+      {
+        "name": "icon-folder-open-outline",
+        "componentName": "IconFolderOpenOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/folder-open.svg"
+      },
+      {
+        "name": "icon-folder-plus-outline",
+        "componentName": "IconFolderPlusOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/folder-plus.svg"
+      },
+      {
+        "name": "icon-formatter-outline",
+        "componentName": "IconFormatterOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/formatter.svg"
+      },
+      {
+        "name": "icon-gift-outline",
+        "componentName": "IconGiftOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/gift.svg"
+      },
+      {
+        "name": "icon-group-outline",
+        "componentName": "IconGroupOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/group.svg"
+      },
+      {
+        "name": "icon-heart-outline",
+        "componentName": "IconHeartOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/heart.svg"
+      },
+      {
+        "name": "icon-hint-outline",
+        "componentName": "IconHintOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/hint.svg"
+      },
+      {
+        "name": "icon-homepage-outline",
+        "componentName": "IconHomepageOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/homepage.svg"
+      },
+      {
+        "name": "icon-image-backup-outline",
+        "componentName": "IconImageBackupOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/image-backup.svg"
+      },
+      {
+        "name": "icon-image-outline",
+        "componentName": "IconImageOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/image.svg"
+      },
+      {
+        "name": "icon-information-outline",
+        "componentName": "IconInformationOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/information.svg"
+      },
+      {
+        "name": "icon-left-outline",
+        "componentName": "IconLeftOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/left.svg"
+      },
+      {
+        "name": "icon-left1-outline",
+        "componentName": "IconLeft1Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/left1.svg"
+      },
+      {
+        "name": "icon-like-outline",
+        "componentName": "IconLikeOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/like.svg"
+      },
+      {
+        "name": "icon-loading-outline",
+        "componentName": "IconLoadingOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/loading.svg"
+      },
+      {
+        "name": "icon-loading1-outline",
+        "componentName": "IconLoading1Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/loading1.svg"
+      },
+      {
+        "name": "icon-location-outline",
+        "componentName": "IconLocationOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/location.svg"
+      },
+      {
+        "name": "icon-lock-outline",
+        "componentName": "IconLockOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/lock.svg"
+      },
+      {
+        "name": "icon-magnifier-outline",
+        "componentName": "IconMagnifierOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/magnifier.svg"
+      },
+      {
+        "name": "icon-mail-outline",
+        "componentName": "IconMailOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/mail.svg"
+      },
+      {
+        "name": "icon-male-outline",
+        "componentName": "IconMaleOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/male.svg"
+      },
+      {
+        "name": "icon-menu-outline",
+        "componentName": "IconMenuOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/menu.svg"
+      },
+      {
+        "name": "icon-minus-outline",
+        "componentName": "IconMinusOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/minus.svg"
+      },
+      {
+        "name": "icon-modify-outline",
+        "componentName": "IconModifyOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/modify.svg"
+      },
+      {
+        "name": "icon-money-outline",
+        "componentName": "IconMoneyOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/money.svg"
+      },
+      {
+        "name": "icon-moon-outline",
+        "componentName": "IconMoonOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/moon.svg"
+      },
+      {
+        "name": "icon-more-outline",
+        "componentName": "IconMoreOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/more.svg"
+      },
+      {
+        "name": "icon-pause-outline",
+        "componentName": "IconPauseOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/pause.svg"
+      },
+      {
+        "name": "icon-pdf-outline",
+        "componentName": "IconPdfOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/pdf.svg"
+      },
+      {
+        "name": "icon-person-information-outline",
+        "componentName": "IconPersonInformationOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/person-information.svg"
+      },
+      {
+        "name": "icon-play-outline",
+        "componentName": "IconPlayOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/play.svg"
+      },
+      {
+        "name": "icon-plus-circle-outline",
+        "componentName": "IconPlusCircleOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/plus-circle.svg"
+      },
+      {
+        "name": "icon-plus-outline",
+        "componentName": "IconPlusOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/plus.svg"
+      },
+      {
+        "name": "icon-ppt-outline",
+        "componentName": "IconPptOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/ppt.svg"
+      },
+      {
+        "name": "icon-question-outline",
+        "componentName": "IconQuestionOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/question.svg"
+      },
+      {
+        "name": "icon-ranking-outline",
+        "componentName": "IconRankingOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/ranking.svg"
+      },
+      {
+        "name": "icon-read-outline",
+        "componentName": "IconReadOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/read.svg"
+      },
+      {
+        "name": "icon-refresh-outline",
+        "componentName": "IconRefreshOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/refresh.svg"
+      },
+      {
+        "name": "icon-refresh1-outline",
+        "componentName": "IconRefresh1Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/refresh1.svg"
+      },
+      {
+        "name": "icon-register-outline",
+        "componentName": "IconRegisterOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/register.svg"
+      },
+      {
+        "name": "icon-register2-outline",
+        "componentName": "IconRegister2Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/register2.svg"
+      },
+      {
+        "name": "icon-reload-outline",
+        "componentName": "IconReloadOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/reload.svg"
+      },
+      {
+        "name": "icon-revoke-outline",
+        "componentName": "IconRevokeOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/revoke.svg"
+      },
+      {
+        "name": "icon-right-outline",
+        "componentName": "IconRightOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/right.svg"
+      },
+      {
+        "name": "icon-right1-outline",
+        "componentName": "IconRight1Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/right1.svg"
+      },
+      {
+        "name": "icon-rotate-left-outline",
+        "componentName": "IconRotateLeftOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/rotate-left.svg"
+      },
+      {
+        "name": "icon-rotate-right-outline",
+        "componentName": "IconRotateRightOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/rotate-right.svg"
+      },
+      {
+        "name": "icon-scan-outline",
+        "componentName": "IconScanOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/scan.svg"
+      },
+      {
+        "name": "icon-search-outline",
+        "componentName": "IconSearchOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/search.svg"
+      },
+      {
+        "name": "icon-security-outline",
+        "componentName": "IconSecurityOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/security.svg"
+      },
+      {
+        "name": "icon-security1-outline",
+        "componentName": "IconSecurity1Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/security1.svg"
+      },
+      {
+        "name": "icon-send-outline",
+        "componentName": "IconSendOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/send.svg"
+      },
+      {
+        "name": "icon-settings-outline",
+        "componentName": "IconSettingsOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/settings.svg"
+      },
+      {
+        "name": "icon-share-outline",
+        "componentName": "IconShareOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/share.svg"
+      },
+      {
+        "name": "icon-shig-outline",
+        "componentName": "IconShigOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/shig.svg"
+      },
+      {
+        "name": "icon-shop-bag-outline",
+        "componentName": "IconShopBagOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/shop-bag.svg"
+      },
+      {
+        "name": "icon-shop-cart-outline",
+        "componentName": "IconShopCartOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/shop-cart.svg"
+      },
+      {
+        "name": "icon-shutdown-outline",
+        "componentName": "IconShutdownOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/shutdown.svg"
+      },
+      {
+        "name": "icon-slash-outline",
+        "componentName": "IconSlashOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/slash.svg"
+      },
+      {
+        "name": "icon-smile-outline",
+        "componentName": "IconSmileOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/smile.svg"
+      },
+      {
+        "name": "icon-star-outline",
+        "componentName": "IconStarOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/star.svg"
+      },
+      {
+        "name": "icon-statistics-outline",
+        "componentName": "IconStatisticsOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/statistics.svg"
+      },
+      {
+        "name": "icon-sun-outline",
+        "componentName": "IconSunOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/sun.svg"
+      },
+      {
+        "name": "icon-switch-outline",
+        "componentName": "IconSwitchOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/switch.svg"
+      },
+      {
+        "name": "icon-tag-outline",
+        "componentName": "IconTagOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/tag.svg"
+      },
+      {
+        "name": "icon-target-outline",
+        "componentName": "IconTargetOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/target.svg"
+      },
+      {
+        "name": "icon-tick-circle-outline",
+        "componentName": "IconTickCircleOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/tick-circle.svg"
+      },
+      {
+        "name": "icon-tick-min-outline",
+        "componentName": "IconTickMinOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/tick-min.svg"
+      },
+      {
+        "name": "icon-tick-outline",
+        "componentName": "IconTickOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/tick.svg"
+      },
+      {
+        "name": "icon-time-outline",
+        "componentName": "IconTimeOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/time.svg"
+      },
+      {
+        "name": "icon-tip-outline",
+        "componentName": "IconTipOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/tip.svg"
+      },
+      {
+        "name": "icon-todo-outline",
+        "componentName": "IconTodoOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/todo.svg"
+      },
+      {
+        "name": "icon-top-outline",
+        "componentName": "IconTopOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/top.svg"
+      },
+      {
+        "name": "icon-trophy-outline",
+        "componentName": "IconTrophyOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/trophy.svg"
+      },
+      {
+        "name": "icon-txt-outline",
+        "componentName": "IconTxtOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/txt.svg"
+      },
+      {
+        "name": "icon-up-outline",
+        "componentName": "IconUpOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/up.svg"
+      },
+      {
+        "name": "icon-up2-outline",
+        "componentName": "IconUp2Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/up2.svg"
+      },
+      {
+        "name": "icon-upload-outline",
+        "componentName": "IconUploadOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/upload.svg"
+      },
+      {
+        "name": "icon-upload1-outline",
+        "componentName": "IconUpload1Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/upload1.svg"
+      },
+      {
+        "name": "icon-upload2-outline",
+        "componentName": "IconUpload2Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/upload2.svg"
+      },
+      {
+        "name": "icon-video-outline",
+        "componentName": "IconVideoOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/video.svg"
+      },
+      {
+        "name": "icon-vip-outline",
+        "componentName": "IconVipOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/vip.svg"
+      },
+      {
+        "name": "icon-wallet-outline",
+        "componentName": "IconWalletOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/wallet.svg"
+      },
+      {
+        "name": "icon-warning-outline",
+        "componentName": "IconWarningOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/warning.svg"
+      },
+      {
+        "name": "icon-word-outline",
+        "componentName": "IconWordOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/word.svg"
+      },
+      {
+        "name": "icon-yike1-outline",
+        "componentName": "IconYike1Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/yike1.svg"
+      },
+      {
+        "name": "icon-yike2-outline",
+        "componentName": "IconYike2Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/yike2.svg"
+      },
+      {
+        "name": "icon-zoom-in-outline",
+        "componentName": "IconZoomInOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/zoom-in.svg"
+      },
+      {
+        "name": "icon-zoom-in2-outline",
+        "componentName": "IconZoomIn2Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/zoom-in2.svg"
+      },
+      {
+        "name": "icon-zoom-out-outline",
+        "componentName": "IconZoomOutOutline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/zoom-out.svg"
+      },
+      {
+        "name": "icon-zoom-out2-outline",
+        "componentName": "IconZoomOut2Outline",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/outline/zoom-out2.svg"
+      }
+    ]
+  },
+  {
+    "title": "面性图标",
+    "type": "fill",
+    "list": [
+      {
+        "name": "icon-alarm-fill",
+        "componentName": "IconAlarmFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/alarm.svg"
+      },
+      {
+        "name": "icon-app-fill",
+        "componentName": "IconAppFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/app.svg"
+      },
+      {
+        "name": "icon-arrow-down2-fill",
+        "componentName": "IconArrowDown2Fill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/arrow-down2.svg"
+      },
+      {
+        "name": "icon-audio-fill",
+        "componentName": "IconAudioFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/audio.svg"
+      },
+      {
+        "name": "icon-authentication-fill",
+        "componentName": "IconAuthenticationFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/authentication.svg"
+      },
+      {
+        "name": "icon-avatar-fill",
+        "componentName": "IconAvatarFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/avatar.svg"
+      },
+      {
+        "name": "icon-back-fill",
+        "componentName": "IconBackFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/back.svg"
+      },
+      {
+        "name": "icon-back1-fill",
+        "componentName": "IconBack1Fill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/back1.svg"
+      },
+      {
+        "name": "icon-bell-fill",
+        "componentName": "IconBellFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/bell.svg"
+      },
+      {
+        "name": "icon-bilibili-fill",
+        "componentName": "IconBilibiliFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/bilibili.svg"
+      },
+      {
+        "name": "icon-bookmark-fill",
+        "componentName": "IconBookmarkFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/bookmark.svg"
+      },
+      {
+        "name": "icon-broadcast-fill",
+        "componentName": "IconBroadcastFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/broadcast.svg"
+      },
+      {
+        "name": "icon-bulb-fill",
+        "componentName": "IconBulbFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/bulb.svg"
+      },
+      {
+        "name": "icon-camera-fill",
+        "componentName": "IconCameraFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/camera.svg"
+      },
+      {
+        "name": "icon-card-fill",
+        "componentName": "IconCardFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/card.svg"
+      },
+      {
+        "name": "icon-circle-plus-fill",
+        "componentName": "IconCirclePlusFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/circle-plus.svg"
+      },
+      {
+        "name": "icon-closed-eye-fill",
+        "componentName": "IconClosedEyeFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/closed-eye.svg"
+      },
+      {
+        "name": "icon-clothes-fill",
+        "componentName": "IconClothesFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/clothes.svg"
+      },
+      {
+        "name": "icon-cross-fill",
+        "componentName": "IconCrossFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/cross.svg"
+      },
+      {
+        "name": "icon-crown-fill",
+        "componentName": "IconCrownFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/crown.svg"
+      },
+      {
+        "name": "icon-date-fill",
+        "componentName": "IconDateFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/date.svg"
+      },
+      {
+        "name": "icon-design-fill",
+        "componentName": "IconDesignFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/design.svg"
+      },
+      {
+        "name": "icon-down-fill",
+        "componentName": "IconDownFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/down.svg"
+      },
+      {
+        "name": "icon-download-fill",
+        "componentName": "IconDownloadFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/download.svg"
+      },
+      {
+        "name": "icon-downward-fill",
+        "componentName": "IconDownwardFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/downward.svg"
+      },
+      {
+        "name": "icon-edit-fill",
+        "componentName": "IconEditFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/edit.svg"
+      },
+      {
+        "name": "icon-email-fill",
+        "componentName": "IconEmailFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/email.svg"
+      },
+      {
+        "name": "icon-excel-fill",
+        "componentName": "IconExcelFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/excel.svg"
+      },
+      {
+        "name": "icon-expression-fill",
+        "componentName": "IconExpressionFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/expression.svg"
+      },
+      {
+        "name": "icon-eye-fill",
+        "componentName": "IconEyeFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/eye.svg"
+      },
+      {
+        "name": "icon-file-fill",
+        "componentName": "IconFileFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/file.svg"
+      },
+      {
+        "name": "icon-fill-fill",
+        "componentName": "IconFillFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/fill.svg"
+      },
+      {
+        "name": "icon-financial-fill",
+        "componentName": "IconFinancialFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/financial.svg"
+      },
+      {
+        "name": "icon-fire-fire-fill",
+        "componentName": "IconFireFireFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/fire-fire.svg"
+      },
+      {
+        "name": "icon-folder-add-fill",
+        "componentName": "IconFolderAddFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/folder-add.svg"
+      },
+      {
+        "name": "icon-folder-close-fill",
+        "componentName": "IconFolderCloseFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/folder-close.svg"
+      },
+      {
+        "name": "icon-folder-open-fill",
+        "componentName": "IconFolderOpenFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/folder-open.svg"
+      },
+      {
+        "name": "icon-gift-fill",
+        "componentName": "IconGiftFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/gift.svg"
+      },
+      {
+        "name": "icon-github-fill",
+        "componentName": "IconGithubFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/github.svg"
+      },
+      {
+        "name": "icon-group-fill",
+        "componentName": "IconGroupFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/group.svg"
+      },
+      {
+        "name": "icon-heart-fill",
+        "componentName": "IconHeartFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/heart.svg"
+      },
+      {
+        "name": "icon-homepage-fill",
+        "componentName": "IconHomepageFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/homepage.svg"
+      },
+      {
+        "name": "icon-image-fill",
+        "componentName": "IconImageFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/image.svg"
+      },
+      {
+        "name": "icon-label-fill",
+        "componentName": "IconLabelFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/label.svg"
+      },
+      {
+        "name": "icon-left-fill",
+        "componentName": "IconLeftFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/left.svg"
+      },
+      {
+        "name": "icon-left1-fill",
+        "componentName": "IconLeft1Fill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/left1.svg"
+      },
+      {
+        "name": "icon-leftward-fill",
+        "componentName": "IconLeftwardFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/leftward.svg"
+      },
+      {
+        "name": "icon-lightbulb-fill",
+        "componentName": "IconLightbulbFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/lightbulb.svg"
+      },
+      {
+        "name": "icon-like-fill",
+        "componentName": "IconLikeFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/like.svg"
+      },
+      {
+        "name": "icon-location-fill",
+        "componentName": "IconLocationFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/location.svg"
+      },
+      {
+        "name": "icon-lock-fill",
+        "componentName": "IconLockFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/lock.svg"
+      },
+      {
+        "name": "icon-logo-backup-5-fill",
+        "componentName": "IconLogoBackup5Fill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/logo-backup-5.svg"
+      },
+      {
+        "name": "icon-logout-fill",
+        "componentName": "IconLogoutFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/logout.svg"
+      },
+      {
+        "name": "icon-money-fill",
+        "componentName": "IconMoneyFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/money.svg"
+      },
+      {
+        "name": "icon-moon-fill",
+        "componentName": "IconMoonFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/moon.svg"
+      },
+      {
+        "name": "icon-more-fill",
+        "componentName": "IconMoreFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/more.svg"
+      },
+      {
+        "name": "icon-move1-fill",
+        "componentName": "IconMove1Fill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/move1.svg"
+      },
+      {
+        "name": "icon-move2-fill",
+        "componentName": "IconMove2Fill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/move2.svg"
+      },
+      {
+        "name": "icon-paint-brush-fill",
+        "componentName": "IconPaintBrushFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/paint-brush.svg"
+      },
+      {
+        "name": "icon-pause-fill",
+        "componentName": "IconPauseFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/pause.svg"
+      },
+      {
+        "name": "icon-pdf-fill",
+        "componentName": "IconPdfFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/pdf.svg"
+      },
+      {
+        "name": "icon-person-information-fill",
+        "componentName": "IconPersonInformationFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/person-information.svg"
+      },
+      {
+        "name": "icon-play-fill",
+        "componentName": "IconPlayFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/play.svg"
+      },
+      {
+        "name": "icon-ppt-fill",
+        "componentName": "IconPptFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/ppt.svg"
+      },
+      {
+        "name": "icon-question-fill",
+        "componentName": "IconQuestionFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/question.svg"
+      },
+      {
+        "name": "icon-ranking-fill",
+        "componentName": "IconRankingFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/ranking.svg"
+      },
+      {
+        "name": "icon-read-fill",
+        "componentName": "IconReadFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/read.svg"
+      },
+      {
+        "name": "icon-register-fill",
+        "componentName": "IconRegisterFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/register.svg"
+      },
+      {
+        "name": "icon-reminder-fill",
+        "componentName": "IconReminderFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/reminder.svg"
+      },
+      {
+        "name": "icon-right-fill",
+        "componentName": "IconRightFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/right.svg"
+      },
+      {
+        "name": "icon-right1-fill",
+        "componentName": "IconRight1Fill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/right1.svg"
+      },
+      {
+        "name": "icon-rightward-fill",
+        "componentName": "IconRightwardFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/rightward.svg"
+      },
+      {
+        "name": "icon-scan-fill",
+        "componentName": "IconScanFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/scan.svg"
+      },
+      {
+        "name": "icon-secure-fill",
+        "componentName": "IconSecureFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/secure.svg"
+      },
+      {
+        "name": "icon-secure1-fill",
+        "componentName": "IconSecure1Fill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/secure1.svg"
+      },
+      {
+        "name": "icon-security-fill",
+        "componentName": "IconSecurityFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/security.svg"
+      },
+      {
+        "name": "icon-send-fill",
+        "componentName": "IconSendFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/send.svg"
+      },
+      {
+        "name": "icon-settings-fill",
+        "componentName": "IconSettingsFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/settings.svg"
+      },
+      {
+        "name": "icon-share-fill",
+        "componentName": "IconShareFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/share.svg"
+      },
+      {
+        "name": "icon-shop-bag-fill",
+        "componentName": "IconShopBagFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/shop-bag.svg"
+      },
+      {
+        "name": "icon-shop-cart-fill",
+        "componentName": "IconShopCartFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/shop-cart.svg"
+      },
+      {
+        "name": "icon-star-fill",
+        "componentName": "IconStarFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/star.svg"
+      },
+      {
+        "name": "icon-statistics-fill",
+        "componentName": "IconStatisticsFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/statistics.svg"
+      },
+      {
+        "name": "icon-sun-fill",
+        "componentName": "IconSunFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/sun.svg"
+      },
+      {
+        "name": "icon-tag-fill",
+        "componentName": "IconTagFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/tag.svg"
+      },
+      {
+        "name": "icon-target-fill",
+        "componentName": "IconTargetFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/target.svg"
+      },
+      {
+        "name": "icon-tick-fill",
+        "componentName": "IconTickFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/tick.svg"
+      },
+      {
+        "name": "icon-time-fill",
+        "componentName": "IconTimeFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/time.svg"
+      },
+      {
+        "name": "icon-todo-fill",
+        "componentName": "IconTodoFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/todo.svg"
+      },
+      {
+        "name": "icon-trophy-fill",
+        "componentName": "IconTrophyFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/trophy.svg"
+      },
+      {
+        "name": "icon-txt-file-fill",
+        "componentName": "IconTxtFileFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/txt-file.svg"
+      },
+      {
+        "name": "icon-txt-fill",
+        "componentName": "IconTxtFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/txt.svg"
+      },
+      {
+        "name": "icon-up-fill",
+        "componentName": "IconUpFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/up.svg"
+      },
+      {
+        "name": "icon-upload-fill",
+        "componentName": "IconUploadFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/upload.svg"
+      },
+      {
+        "name": "icon-upward-fill",
+        "componentName": "IconUpwardFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/upward.svg"
+      },
+      {
+        "name": "icon-user-info-fill",
+        "componentName": "IconUserInfoFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/user-info.svg"
+      },
+      {
+        "name": "icon-video-fill",
+        "componentName": "IconVideoFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/video.svg"
+      },
+      {
+        "name": "icon-vip-fill",
+        "componentName": "IconVipFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/vip.svg"
+      },
+      {
+        "name": "icon-wallet-fill",
+        "componentName": "IconWalletFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/wallet.svg"
+      },
+      {
+        "name": "icon-warning-fill",
+        "componentName": "IconWarningFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/warning.svg"
+      },
+      {
+        "name": "icon-wechat-fill",
+        "componentName": "IconWechatFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/wechat.svg"
+      },
+      {
+        "name": "icon-word-fill",
+        "componentName": "IconWordFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/word.svg"
+      },
+      {
+        "name": "icon-yike1-fill",
+        "componentName": "IconYike1Fill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/yike1.svg"
+      },
+      {
+        "name": "icon-yike2-fill",
+        "componentName": "IconYike2Fill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/yike2.svg"
+      },
+      {
+        "name": "icon-yikename-fill",
+        "componentName": "IconYikenameFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/yikename.svg"
+      },
+      {
+        "name": "icon-yiketime-fill",
+        "componentName": "IconYiketimeFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/yiketime.svg"
+      },
+      {
+        "name": "icon-ykdesign-fill",
+        "componentName": "IconYkdesignFill",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/fill/ykdesign.svg"
+      }
+    ]
+  },
+  {
+    "title": "多彩图标",
+    "type": "color",
+    "list": [
+      {
+        "name": "icon-empty1-color",
+        "componentName": "IconEmpty1Color",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/color/empty1.svg"
+      },
+      {
+        "name": "icon-empty2-color",
+        "componentName": "IconEmpty2Color",
+        "path": "E:/blog毕业论文设计文件夹/code/yike-design-dev-monorepo-dev/packages/yike-design-ui/icon/color/empty2.svg"
+      }
+    ]
+  }
+]

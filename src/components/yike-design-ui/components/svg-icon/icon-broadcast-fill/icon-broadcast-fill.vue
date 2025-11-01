@@ -1,0 +1,43 @@
+
+  <script setup lang="ts">
+    import { CSSProperties, computed } from 'vue'
+
+    defineOptions({
+      name: 'IconBroadcastFill',
+    })
+
+    const props = withDefaults(
+      defineProps<{
+        size?: string | number
+        strokeWidth?: number
+        strokeLinecap?: 'butt' | 'round' | 'square'
+        // strokeLinejoin?: 'arcs' | 'bevel' | 'miter' | 'miter-clip' | 'round'
+        rotate?: number
+        spin?: boolean
+      }>(),
+      {
+        strokeWidth: 0,
+        strokeLinecap: 'butt',
+        // strokeLinejoin: 'arcs',
+        size: 'inherit',
+        rotate: undefined,
+        spin: false,
+      },
+    )
+    const cls = ['yk-icon', 'icon-broadcast-fill']
+    const innerStyle = computed(() => {
+      const styles: CSSProperties = { fill: "currentColor" }
+      if (props.size) {
+        styles.fontSize =
+          typeof props.size === 'number' ? `${props.size}px` : props.size
+      }
+      if (props.rotate) {
+        styles.transform = `rotate(${props.rotate}deg)`
+      }
+      return styles
+    })
+  </script>
+
+  <template>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" :class="cls" :style="innerStyle" :stroke-width="strokeWidth" :stroke-linecap="strokeLinecap"><path d="M51.2 691.2V332.8h179.2l371.456-208.947A25.6 25.6 0 0 1 640 146.176v731.648a25.6 25.6 0 0 1-38.144 22.323L230.4 691.2zm742.4-217.6h179.2v76.8H793.6zm-59.034-214.528 162.407-75.75 32.46 69.632-162.406 75.724zm0 505.856 162.407 75.75 32.46-69.632-162.406-75.724z"></path></svg>
+  </template>

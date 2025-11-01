@@ -1,0 +1,50 @@
+@import '../../styles/basis.less';
+@import '../../styles//mixin.less';
+@import '../../tooltip/style/index.less';
+
+.yk-dropdown {
+  position: relative;
+
+  .yk-tooltip {
+    --tooltip-theme-bg-color: @light;
+    --tooltip-theme-font-color: @font-color-l;
+  }
+
+  &.yk-dropdown--disabled,
+  &__item--disabled {
+    .disabled();
+  }
+  &__item--disabled:hover {
+    cursor: not-allowed;
+    background-color: transparent !important;
+  }
+  .yk-tooltip__content {
+    padding: @space-ss;
+    min-width: auto;
+    max-width: none;
+    min-height: auto;
+    max-height: none;
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform @animatb ease;
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 @space-m;
+    line-height: 32px;
+    border-radius: @radius-s;
+    cursor: pointer;
+
+    &.disabled {
+      .disabled();
+    }
+
+    &:hover {
+      background-color: @bg-color-s;
+    }
+  }
+}
