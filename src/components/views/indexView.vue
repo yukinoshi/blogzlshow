@@ -11,7 +11,6 @@ import TopBar from '../bar/TopBar.vue';
 
 <style lang="less" scoped>
 .index-view {
-  padding: 72px 0;
   width: 100%;
   height: 2000px;
 }

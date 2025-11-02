@@ -1,17 +1,13 @@
 <script setup lang="ts">
+import { banner } from "../home-page/";
 </script>
 
 <template>
-  <div>首页</div>
-  <div>首页</div>
-  <div>首页</div>
-  <div>首页</div>
-  <div>首页</div>
-  <div>首页</div>
-  <div>首页</div>
-  <div>首页</div>
-  <div>首页</div>
-  <div>首页</div>
+  <banner />
+  <div>sye</div>
+  <div>sye</div>
+  <div>sye</div>
+  <div>sye</div>
 </template>
 
 <style lang="less" scoped>

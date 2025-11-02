@@ -1,11 +1,13 @@
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue';
+import { onBeforeMount, onMounted, ref } from 'vue';
 import { navLink } from '../../utils/menu'
+import { useRouter } from 'vue-router';
 
 const isShow = ref(false)
+const router = useRouter()
 
 let nowTop = 0;
-
+//显示和隐藏顶部导航栏
 const retract = () => {
   const scrollTop = document.documentElement.scrollTop;
   if (scrollTop > nowTop) {
@@ -18,9 +20,9 @@ const retract = () => {
     isShow.value = false;
   }
 }
-
+//导航栏模糊效果
 const opacity = ref(0);
-const handleScroll = () => {
+const handleOpacityScroll = () => {
   const scrollTop = document.documentElement.scrollTop;
   const maxScroll = 30;
   if (scrollTop < maxScroll) {
@@ -32,15 +34,23 @@ const handleScroll = () => {
   }
 };
 
+const goPage = (path: string) => {
+  router.push(path)
+}
+
 onMounted(() => {
   document.addEventListener('scroll', retract)
-  document.addEventListener('scroll', handleScroll)
+  document.addEventListener('scroll', handleOpacityScroll)
+})
+onBeforeMount(() => {
+  document.removeEventListener('scroll', retract)
+  document.removeEventListener('scroll', handleOpacityScroll)
 })
 </script>
 
 <template>
   <div class="top-bar" :style="{backdropFilter: `blur(${opacity * 8}px)`}" :class="{ show: isShow }">
-    <IconYike1Fill class="logo" />
+    <IconYike1Fill class="logo" @click="goPage('/')" />
     <yk-space :size="56">
       <router-link v-for="(item, index) in navLink" :key="index" :to="item.path">
         <yk-text>
@@ -70,6 +80,7 @@ onMounted(() => {
   z-index: 100;
   transition: all @animatb;
   .logo {
+    cursor: pointer;
     height: 32px;
     width: 52px;
     color: @pcolor
