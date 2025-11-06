@@ -6,10 +6,11 @@
 </template>
 
 <script lang="ts" setup>
+import { watch } from 'vue'
 import { ThemeProps } from './theme'
 import { IconMoonFill, IconSunFill } from '../../svg-icon'
 import { useDark, useToggle } from '@vueuse/core'
-
+const emits = defineEmits(['isDark'])
 const props = withDefaults(defineProps<ThemeProps>(), {
   skin: 'auto',
   control: true,
@@ -23,4 +24,7 @@ const isDark = useDark({
   storageKey: props.storageKey,
 })
 const toggleDark = useToggle(isDark)
+watch(isDark, (newVal) => {
+  emits('isDark', newVal)
+})
 </script>

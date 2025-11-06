@@ -1,5 +1,6 @@
 import banner from "./banner.vue";
-
-export  {
-    banner
+import homeData from "./homeData.vue";
+export {
+    banner,
+    homeData
 };

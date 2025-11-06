@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { useThemeStore } from '../../store/theme';
 
-
-const isDark = ref(false);
+const useTheme = useThemeStore()
 const downMove = () => {
   window.scrollTo({
     top: 920,
@@ -17,7 +16,7 @@ const downMove = () => {
       <div class="banner-pic">
         <div class="banner-bgc-light"></div>
         <div class="banner-bgc-brown"></div>
-        <img class="banner-img" v-if="isDark" src="/public/images/dark.png" alt="">
+        <img class="banner-img" v-if="useTheme.isDark" src="/public/images/dark.png" alt="">
         <img class="banner-img" v-else src="/public/images/banner.png" alt="">
       </div>
       <div class="banner-slogan">
@@ -52,7 +51,7 @@ const downMove = () => {
       text-align: center;
       padding-top: 58px;
       position: absolute;
-      bottom: 0;
+      bottom: 60px;
       left: -80px;
 
       .downarrow {

@@ -2,9 +2,11 @@
 import { onBeforeMount, onMounted, ref } from 'vue';
 import { navLink } from '../../utils/menu'
 import { useRouter } from 'vue-router';
+import { useThemeStore } from '../../store/theme';
 
 const isShow = ref(false)
 const router = useRouter()
+const useTheme = useThemeStore()
 
 let nowTop = 0;
 //显示和隐藏顶部导航栏
@@ -38,6 +40,10 @@ const goPage = (path: string) => {
   router.push(path)
 }
 
+const changeTheme = (isDark: boolean) => {
+  useTheme.isDark = isDark;  
+}
+
 onMounted(() => {
   document.addEventListener('scroll', retract)
   document.addEventListener('scroll', handleOpacityScroll)
@@ -60,7 +66,7 @@ onBeforeMount(() => {
     </yk-space>
     <yk-space align="center" size="m">
       <IconSearchOutline class="search" />
-      <div><yk-theme /></div>
+      <div><yk-theme @isDark="changeTheme" /></div>
     </yk-space>
     <div class="top-bar__bg" :style="{opacity: opacity - 0.16}"></div>
   </div>
