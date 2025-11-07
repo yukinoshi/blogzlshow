@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
-import { banner,homeData } from "../home-page/";
+import { banner,homeArticle,homeData } from "../home-page/";
 import { addVisitDataApi } from "../../api/visits";
 
 const addVisit = async () => {
@@ -16,6 +16,7 @@ onMounted(() => {
   <banner />
   <yk-space :size="120" dir="vertical" style="padding-top: 120px;" align="center">
     <homeData />
+    <homeArticle :pagesize="4" />
   </yk-space>
   <div>sye</div>
   <div>sye</div>

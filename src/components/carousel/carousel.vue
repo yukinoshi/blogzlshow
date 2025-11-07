@@ -2,7 +2,7 @@
 import { onMounted, ref, getCurrentInstance } from 'vue';
 import { getBannerImagesApi } from '../../api/banner';
 import type { BannerImage } from '../../utils/interface';
-import { spellImage } from '../../utils/spelimg';
+import { spellImage } from '../../hook/spelimg';
 
 const currentslideIndex = ref(0);
 const proxy: any = getCurrentInstance()?.proxy
