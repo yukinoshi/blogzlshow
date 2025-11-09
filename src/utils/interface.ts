@@ -2,6 +2,10 @@ export type Code = {
   code: number;
 }
 
+export type Res = Code & {
+  data: number;//插入返回的id
+}
+
 export type PageType = {
   pageSize: number;//单页条数；
   nowPage: number;//当前页
@@ -52,6 +56,7 @@ export type articleData = {
   comment: number;//评论数
   praise: number;//点赞次数
   content?: string | string[] | undefined | Photo[];//内容
+  isPraise: boolean;//是否点赞
 }
 
 export type ResArticleData = Code & {
@@ -60,6 +65,21 @@ export type ResArticleData = Code & {
     countUnpublish: number;
     list: articleData[];
   };
+}
+
+export type ReqLikeArticle = {
+  articleId: number;
+  userId: string;
+  moment: string;
+}
+
+export type ReqNoLikeArticle = {
+  articleId: number;
+  userId: string;
+}
+
+export type ReqLikeArticleFront = {
+  articleId: number;
 }
 
 export type SubsetData = {
@@ -82,4 +102,44 @@ export type ResSubsetData = Code & {
     count: number;
     list: SubsetData[];
   };
+}
+
+export type ReqAddComment = {
+  userId?: number;
+  userName: string;
+  articleId: number;
+  content: string;
+  moment: string;
+}
+
+export type commentData = {
+  id: number;
+  user_id: string;
+  user_name: string;
+  article_id: number;
+  moment: string;
+  content: string;
+  complaint: number;
+  isread: number;
+  praise: number;
+  isPraise: boolean;
+}
+
+export type RescommentData = Code & {
+  data: commentData[];
+}
+
+export type ReqLikeComment = {
+  commentId: number;
+  userId: string;
+  moment: string;
+}
+
+export type ReqLikeCommentFront = {
+  commentId: number;
+}
+
+export type ReqNoLikeComment = {
+  commentId: number;
+  userId: string;
 }

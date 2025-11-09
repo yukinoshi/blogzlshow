@@ -1,6 +1,11 @@
 <script setup lang="ts">
-// import TopBar from './components/bar/TopBar.vue';
+import { onMounted } from 'vue';
+import { loadFingerprint } from './utils/loadfingerprint';
 
+// import TopBar from './components/bar/TopBar.vue';
+onMounted(() => {
+  loadFingerprint();
+})
 </script>
 
 <template>

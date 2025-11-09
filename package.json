@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^5.0.1",
     "@vueuse/core": "^14.0.0",
     "axios": "^1.13.1",
     "dayjs": "^1.11.18",

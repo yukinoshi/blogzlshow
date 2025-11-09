@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
 import { labelString } from '../../hook/labelString';
 import { spellImage } from '../../hook/spelimg';
 import { subsetString } from '../../hook/subsetString';
@@ -13,7 +14,14 @@ const props = defineProps({
   }
 })
 
+const route = useRouter()
+
 const subsetName = ref<string>('');
+
+//跳转到详情页
+const goToDetail = (articleId: number) => {
+  route.push({ path: '/article', query: { id: articleId.toString() } });
+}
 
 onMounted(async () => {
   const subsetId = props.article.subset_id;
@@ -24,7 +32,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <yk-space size="s" class="article-item" dir="vertical">
+  <yk-space size="s" class="article-item" dir="vertical" @click="goToDetail(props.article.id)">
     <yk-space size="m" align="center" style="margin-top: -52px;">
       <yk-image :src="spellImage(props.article.cover)" width="160" height="120" :is-lazy="true"
         :preview="false"></yk-image>
@@ -41,11 +49,11 @@ onMounted(async () => {
       <yk-space>
         <yk-text type="third">
           <IconCommentOutline />
-          {{ props.article.views }}
+          {{ props.article.comment }}
         </yk-text>
         <yk-text type="third">
           <IconEyeOutline />
-          {{ props.article.comment }}
+          {{ props.article.views }}
         </yk-text>
       </yk-space>
     </div>

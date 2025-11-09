@@ -1,5 +1,5 @@
 import service from "../utils/axios";
-import type { ReqGetArticle, ResArticleData } from "../utils/interface";
+import type { articleData, Code, ReqGetArticle, ResArticleData } from "../utils/interface";
 
 /**
  * 根据分页 标题简介内容模糊搜索 根据类别搜索文章0或者图库1 根据分类ID 搜索文章
@@ -8,4 +8,14 @@ import type { ReqGetArticle, ResArticleData } from "../utils/interface";
  */
 export const getArticleApi = async (data: ReqGetArticle) => {
   return await service.post('/article', data) as ResArticleData
+}
+
+/**
+ * 根据文章ID获取文章数据
+ * @param articleId 文章ID
+ * @returns 返回文章数据
+ */
+export const getArticleByIdApi = async (articleId: number, fingerprint: string) => {
+  return await service.post('/gainArticle', { articleId, fingerprint }) as Code & {data: articleData}
+
 }

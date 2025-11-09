@@ -1,4 +1,23 @@
 <script setup lang="ts">
+import { ref, watch } from 'vue';
+import type { commentData } from '../../utils/interface';
+
+const emits = defineEmits(['changeComment'])
+
+const props = defineProps<{ data: commentData }>();
+
+const isPraise = ref<boolean>(props.data.isPraise || false);
+
+const likeComment = async () => {
+  emits('changeComment', { id: props.data.id, is: isPraise.value })
+}
+
+watch(
+  () => props.data.isPraise,
+  (newVal) => {
+    isPraise.value = newVal || false
+  }
+)
 </script>
 
 <template>
@@ -8,10 +27,10 @@
       <div class="comment-main">
         <yk-space size="ss" dir="vertical">
           <div>
-            <yk-text class="comment-main-name">访客</yk-text>
-            <p class="comment-main-time">2024-06-01</p>
+            <yk-text class="comment-main-name">{{ props.data.user_name }}</yk-text>
+            <p class="comment-main-time">{{ props.data.moment }}</p>
           </div>
-          <yk-text type="secondary">这是评论的内容</yk-text>
+          <yk-text type="secondary">{{ props.data.content }}</yk-text>
         </yk-space>
         <div class="comment-bar">
           <yk-space size="s">
@@ -19,9 +38,9 @@
               <IconHintOutline />
               举报
             </p>
-            <p class="control">
+            <p class="control" @click="likeComment" :class="{ isLike: isPraise }">
               <IconLikeOutline />
-              2
+              {{ props.data.praise || 0 }}
             </p>
           </yk-space>
         </div>
@@ -58,6 +77,10 @@
     right: 0;
     top: 0;
     padding: 0 0 4px 8px;
+
+    .isLike {
+      color: @pcolor;
+    }
 
     .report {
       display: none;
