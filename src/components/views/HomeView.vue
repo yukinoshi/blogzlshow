@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
-import { banner,homeArticle,homeData } from "../home-page/";
+import { banner, homeArticle, homeData } from "../home-page/";
 import { addVisitDataApi } from "../../api/visits";
 
 const addVisit = async () => {
@@ -24,6 +24,4 @@ onMounted(() => {
   <div>sye</div>
 </template>
 
-<style lang="less" scoped>
-
-</style>
+<style lang="less" scoped></style>

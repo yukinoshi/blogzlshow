@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { getCurrentInstance, onMounted, ref, watch } from 'vue';
+import { getCurrentInstance, onMounted, ref, watch, shallowRef, computed } from 'vue';
+import { onBeforeUnmount } from 'vue';
 import commentItem from '../comment/comment-item.vue';
 import { useRoute } from 'vue-router';
 import { getArticleById } from '../../hook/article';
@@ -9,8 +10,22 @@ import { subsetString } from '../../hook/subsetString';
 import { addComment, getCommentData } from '../../hook/comment';
 import { momentm } from '../../utils/moment';
 import { addPraise, addPraiseComment, deletePraise, deletePraiseComment } from '../../hook/praise';
+import TopBar from '../bar/TopBar.vue';
 
 const proxy: any = getCurrentInstance()?.proxy
+
+const lockBody = () => {
+  try {
+    document.documentElement.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden'
+  } catch {}
+}
+const unlockBody = () => {
+  try {
+    document.documentElement.style.overflow = ''
+    document.body.style.overflow = ''
+  } catch {}
+}
 
 const isSubmit = ref(false);
 
@@ -29,6 +44,13 @@ const contentHtml = ref<string>('')
 const comments = ref<commentData[]>([])
 
 const isPraise = ref<boolean>(false);
+
+const props = defineProps<{ articleId?: number; overlay?: boolean }>()
+const isOverlay = ref<boolean>(false);
+
+const scrollbar = shallowRef()
+
+const top = ref<number>(0);
 
 const maindown = () => {
   const modelMain = document.querySelector<HTMLElement>('.model-main');
@@ -52,8 +74,10 @@ const shareLink = () => {
 }
 
 //获取文章详情数据
+const effectiveId = computed(() => props.articleId ?? Number(route.query.id))
+
 const getDetailarticle = async () => {
-  const articleId = route.query.id;
+  const articleId = effectiveId.value;
   const res = await getArticleById(Number(articleId));
   if (res.data) {
     article.value = res.data
@@ -73,7 +97,7 @@ const getDetailarticle = async () => {
 
 const submitComment = async () => {
   await addComment({
-    articleId: Number(route.query.id),
+    articleId: Number(effectiveId.value),
     userName: username.value,
     content: comment_content.value,
     moment: momentm(new Date())
@@ -85,7 +109,7 @@ const submitComment = async () => {
 const changelike = async () => {
   if (isPraise.value) { //取消点赞
     const res = await deletePraise({
-      articleId: Number(route.query.id)
+      articleId: Number(effectiveId.value)
     })
     if (res.code !== 200) {
       proxy.$message({ type: 'warning', message: '取消点赞失败' })
@@ -95,7 +119,7 @@ const changelike = async () => {
     proxy.$message({ type: 'success', message: '取消点赞成功' })
   } else { //点赞文章
     const res = await addPraise({
-      articleId: Number(route.query.id)
+      articleId: Number(effectiveId.value)
     })
     if (res.code !== 200) {
       proxy.$message({ type: 'warning', message: '点赞失败' })
@@ -145,6 +169,11 @@ const changeComment = async (newState: any) => {
   getDetailarticle()
 }
 
+const backTo = () => {
+  //返回上一页
+  window.history.back();
+}
+
 watch(comment_content, (newVal) => {
   if (newVal && newVal.length > 0) {
     isSubmit.value = false;
@@ -153,18 +182,52 @@ watch(comment_content, (newVal) => {
   }
 }, { immediate: true });
 
-onMounted(async () => {
+const handleScroll = (e: any) => {
+  top.value = e.target.scrollTop;
+}
+
+onMounted(() => {
   getDetailarticle()
+  // 根据是否存在 fromHome 标记或 route.query.overlay 来判定覆盖模式
+  if (props.overlay === true || route.query.overlay === '1' || sessionStorage.getItem('fromHome') === 'true') {
+    isOverlay.value = true
+    sessionStorage.removeItem('fromHome')
+  } else {
+    isOverlay.value = false
+  }
+})
+
+// 覆盖层打开时隐藏页面原生滚动条，关闭时恢复
+watch(isOverlay, (val) => {
+  if (val) {
+    try {
+      document.documentElement.style.overflow = 'hidden'
+      document.body.style.overflow = 'hidden'
+    } catch {}
+  } else {
+    try {
+      document.documentElement.style.overflow = ''
+      document.body.style.overflow = ''
+    } catch {}
+  }
+}, { immediate: true })
+
+onBeforeUnmount(() => {
+  try {
+    document.documentElement.style.overflow = ''
+    document.body.style.overflow = ''
+  } catch {}
 })
 </script>
 
 <template>
-  <div class="model-mask" @mouseenter="maindown" @mouseleave="mainup"></div>
-  <div class="model-main" style="height: 908px;">
-    <div class="model-close">
-      <IconCircleCrossOutline />
+  <div class="model-mask" v-if="isOverlay" @click="backTo" @mouseenter="maindown" @mouseleave="mainup"></div>
+  <TopBar v-else :scrollTop="top" />
+  <div class="model-main" style="height: 97vh;" :style="!isOverlay ? { height: '100%' } : {}">
+    <div class="model-close" v-if="isOverlay">
+      <IconCircleCrossOutline @click="backTo" />
     </div>
-    <yk-scrollbar ref="scrollbar">
+    <yk-scrollbar ref="scrollbar" @scroll="handleScroll">
       <div class="model-content">
         <div class="article-view">
           <div class="article">
@@ -240,13 +303,30 @@ onMounted(async () => {
 </template>
 
 <style lang="less" scoped>
+.overlay-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1; // 低于遮罩和主容器（99），仅作为视觉背景
+  overflow: auto;
+  pointer-events: none; // 禁止背景接收事件，所有交互都在覆盖层
+  /* 隐藏背景层的原生滚动条（仍可滚动） */
+  scrollbar-width: none;           /* Firefox */
+  -ms-overflow-style: none;        /* IE 10+ */
+}
+.overlay-bg::-webkit-scrollbar {   /* Chrome/Safari/Edge(Chromium) */
+  width: 0;
+  height: 0;
+}
 .model-mask {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 999;
+  z-index: 99;
   margin: auto;
   width: 100%;
   height: 100%;
@@ -262,7 +342,7 @@ onMounted(async () => {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 999;
+  z-index: 99;
   margin: auto;
   width: 100%;
   border-radius: 24px 24px 0 0;
@@ -471,5 +551,16 @@ onMounted(async () => {
       justify-content: center;
     }
   }
+}
+
+/* 隐藏 yk-scrollbar 内部可滚动容器的原生滚动条（仍可滚动） */
+/* 深度选择器匹配到组件内部生成的 wrap 元素 */
+::v-deep(.yk-scrollbar__wrap) {
+  scrollbar-width: none;    /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+::v-deep(.yk-scrollbar__wrap::-webkit-scrollbar) { /* Chrome/Safari/Edge(Chromium) */
+  width: 0;
+  height: 0;
 }
 </style>

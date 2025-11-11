@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onBeforeMount, onMounted, ref } from 'vue';
+import { onBeforeMount, onMounted, ref, watch } from 'vue';
 import { navLink } from '../../utils/menu'
 import { useRouter } from 'vue-router';
 import { useThemeStore } from '../../store/theme';
@@ -8,10 +8,14 @@ const isShow = ref(false)
 const router = useRouter()
 const useTheme = useThemeStore()
 
+const props = defineProps<{
+  scrollTop?: number
+}>()
+
 let nowTop = 0;
 //显示和隐藏顶部导航栏
 const retract = () => {
-  const scrollTop = document.documentElement.scrollTop;
+  const scrollTop = props.scrollTop || document.documentElement.scrollTop;
   if (scrollTop > nowTop) {
     nowTop = scrollTop;
     if (nowTop > 800) {
@@ -25,11 +29,11 @@ const retract = () => {
 //导航栏模糊效果
 const opacity = ref(0);
 const handleOpacityScroll = () => {
-  const scrollTop = document.documentElement.scrollTop;
+  const scrollTop = props.scrollTop || document.documentElement.scrollTop;
   const maxScroll = 30;
   if (scrollTop < maxScroll) {
     opacity.value = 0;
-  } else if (scrollTop > 130){
+  } else if (scrollTop > 130) {
     opacity.value = 1;
   } else {
     opacity.value = (scrollTop - maxScroll) / 100;
@@ -41,21 +45,30 @@ const goPage = (path: string) => {
 }
 
 const changeTheme = (isDark: boolean) => {
-  useTheme.isDark = isDark;  
+  useTheme.isDark = isDark;
 }
 
+watch(() => props.scrollTop, () => {//如果有详情页传入scrollTop
+  retract()
+  handleOpacityScroll()
+})
+
 onMounted(() => {
-  document.addEventListener('scroll', retract)
-  document.addEventListener('scroll', handleOpacityScroll)
+  if (!props.scrollTop) {
+    document.addEventListener('scroll', retract)
+    document.addEventListener('scroll', handleOpacityScroll)
+  }
 })
 onBeforeMount(() => {
-  document.removeEventListener('scroll', retract)
-  document.removeEventListener('scroll', handleOpacityScroll)
+  if (!props.scrollTop) {
+    document.removeEventListener('scroll', retract)
+    document.removeEventListener('scroll', handleOpacityScroll)
+  }
 })
 </script>
 
 <template>
-  <div class="top-bar" :style="{backdropFilter: `blur(${opacity * 8}px)`}" :class="{ show: isShow }">
+  <div class="top-bar" :style="{ backdropFilter: `blur(${opacity * 8}px)` }" :class="{ show: isShow }">
     <IconYike1Fill class="logo" @click="goPage('/')" />
     <yk-space :size="56">
       <router-link v-for="(item, index) in navLink" :key="index" :to="item.path">
@@ -68,7 +81,7 @@ onBeforeMount(() => {
       <IconSearchOutline class="search" />
       <div><yk-theme @isDark="changeTheme" /></div>
     </yk-space>
-    <div class="top-bar__bg" :style="{opacity: opacity - 0.16}"></div>
+    <div class="top-bar__bg" :style="{ opacity: opacity - 0.16 }"></div>
   </div>
 </template>
 
@@ -85,6 +98,7 @@ onBeforeMount(() => {
   left: 0;
   z-index: 100;
   transition: all @animatb;
+
   .logo {
     cursor: pointer;
     height: 32px;
@@ -121,6 +135,7 @@ onBeforeMount(() => {
       margin-left: -8px;
     }
   }
+
   &__bg {
     position: absolute;
     top: 0;

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
 import { labelString } from '../../hook/labelString';
 import { spellImage } from '../../hook/spelimg';
 import { subsetString } from '../../hook/subsetString';
@@ -14,13 +13,18 @@ const props = defineProps({
   }
 })
 
-const route = useRouter()
+import { useOverlayStore } from '../../store/overlay'
+const overlayStore = useOverlayStore()
 
 const subsetName = ref<string>('');
 
-//跳转到详情页
+// 跳转到详情页（覆盖层显示在 HomeView 上方，不销毁 HomeView）
 const goToDetail = (articleId: number) => {
-  route.push({ path: '/article', query: { id: articleId.toString() } });
+  // 打开覆盖层
+  overlayStore.show(articleId)
+  // 更新地址栏为可分享的独立页链接，但不触发路由重渲染
+  const url = `/article?id=${articleId}`
+  window.history.pushState({}, '', url)
 }
 
 onMounted(async () => {
@@ -99,5 +103,10 @@ onMounted(async () => {
     justify-content: space-between;
   }
 
+}
+
+.yk-drawer__header {
+  width: 0;
+  height: 0;
 }
 </style>
