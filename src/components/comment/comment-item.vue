@@ -53,7 +53,6 @@ watch(
 .comment {
   width: 100%;
 
-
   &-main {
     position: relative;
     flex: 1;

@@ -14,19 +14,6 @@ import TopBar from '../bar/TopBar.vue';
 
 const proxy: any = getCurrentInstance()?.proxy
 
-const lockBody = () => {
-  try {
-    document.documentElement.style.overflow = 'hidden'
-    document.body.style.overflow = 'hidden'
-  } catch {}
-}
-const unlockBody = () => {
-  try {
-    document.documentElement.style.overflow = ''
-    document.body.style.overflow = ''
-  } catch {}
-}
-
 const isSubmit = ref(false);
 
 const username = ref<string>('访客');
@@ -559,7 +546,8 @@ onBeforeUnmount(() => {
   scrollbar-width: none;    /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
 }
-::v-deep(.yk-scrollbar__wrap::-webkit-scrollbar) { /* Chrome/Safari/Edge(Chromium) */
+::v-deep(.yk-scrollbar__wrap::-webkit-scrollbar) { 
+  /* Chrome/Safari/Edge(Chromium) */
   width: 0;
   height: 0;
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TitleBar } from "../bar";
+import { TitleBar, MoreBar } from "../bar";
 import articleItem from "../article/article-item.vue";
 import { onMounted, ref } from "vue";
 import { getArticle } from "../../hook/article";
@@ -35,6 +35,7 @@ onMounted(async () => {
     <div class="home-article-inner">
       <articleItem v-for="item in articles" :key="item.id" :article="item" />
     </div>
+    <MoreBar url="/blog" />
   </div>
 </template>
 
