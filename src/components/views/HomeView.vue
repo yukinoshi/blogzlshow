@@ -17,7 +17,7 @@ onMounted(() => {
   <yk-space :size="120" dir="vertical" style="padding-top: 120px;" align="center">
     <homeData />
     <homeArticle :pagesize="4" />
-    <homeGallery />
+    <homeGallery :pagesize="4" />
   </yk-space>
   <div>sye</div>
   <div>sye</div>

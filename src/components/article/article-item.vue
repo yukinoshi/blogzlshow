@@ -4,7 +4,7 @@ import { spellImage } from '../../hook/spelimg';
 import { subsetString } from '../../hook/subsetString';
 import type { articleData } from '../../utils/interface';
 import { onMounted, ref, type PropType } from 'vue';
-
+import { useOverlayStore } from '../../store/overlay'
 
 const props = defineProps({
   article: {
@@ -13,7 +13,6 @@ const props = defineProps({
   }
 })
 
-import { useOverlayStore } from '../../store/overlay'
 const overlayStore = useOverlayStore()
 
 const subsetName = ref<string>('');

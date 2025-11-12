@@ -1,5 +1,5 @@
 import service from "../utils/axios";
-import type { Code, ReqAddComment, RescommentData } from "../utils/interface";
+import type { ReqAddComment, Res, RescommentData } from "../utils/interface";
 
 /**
  * 根据文章id获取文章所有的评论
@@ -16,5 +16,5 @@ export const getCommentsByArticleIdApi = async (articleId: number, fingerprint: 
  * @returns 返回code200代表成功
  */
 export const addCommentApi = async (data: ReqAddComment) => {
-  return await service.post('/addcomment', data) as Code;
+  return await service.post('/addcomment', data) as Res;
 }

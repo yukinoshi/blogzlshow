@@ -11,6 +11,7 @@ import { addComment, getCommentData } from '../../hook/comment';
 import { momentm } from '../../utils/moment';
 import { addPraise, addPraiseComment, deletePraise, deletePraiseComment } from '../../hook/praise';
 import TopBar from '../bar/TopBar.vue';
+import { spellImage } from '../../hook/spelimg';
 
 const proxy: any = getCurrentInstance()?.proxy
 
@@ -64,6 +65,7 @@ const shareLink = () => {
 const effectiveId = computed(() => props.articleId ?? Number(route.query.id))
 
 const getDetailarticle = async () => {
+  contentHtml.value = '';
   const articleId = effectiveId.value;
   const res = await getArticleById(Number(articleId));
   if (res.data) {
@@ -73,8 +75,17 @@ const getDetailarticle = async () => {
   if (typeof subsetId === 'number') {
     subsetName.value = await subsetString({ value: [{ id: subsetId || 0 }] });
   }
-  // 把字符串转化为 html（已由后端或编辑器生成），使用 v-html 渲染并保证已清洗
-  contentHtml.value = String(res.data?.content || '')
+  // 判断内容是图库还是文章
+  if (res.data?.classify) {//是图库
+    JSON.parse(article.value.content as string)
+      .map((item: any) => item.url)
+      .forEach((url: string) => {
+        contentHtml.value += `<div style="text-align: center; margin-bottom: 16px;"><img src="${spellImage(url)}" style="max-width: 100%;"/></div>`;
+      });
+  } else {//是文章
+    // 把字符串转化为 html（已由后端或编辑器生成），使用 v-html 渲染并保证已清洗
+    contentHtml.value = String(res.data?.content || '')
+  }
   isPraise.value = res.data?.isPraise || false;
   const comment = await getCommentData(Number(articleId));
   comments.value = comment.data || [];
@@ -83,13 +94,24 @@ const getDetailarticle = async () => {
 }
 
 const submitComment = async () => {
-  await addComment({
+  const res = await addComment({
     articleId: Number(effectiveId.value),
     userName: username.value,
     content: comment_content.value,
     moment: momentm(new Date())
   })
-  getDetailarticle()
+  comments.value.push({
+    id: res.data!, // 使用后端返回的评论 ID
+    article_id: Number(effectiveId.value),
+    user_name: username.value,
+    content: comment_content.value,
+    moment: momentm(new Date()),
+    praise: 0,
+    isPraise: false,
+    user_id: '-1',
+    complaint: 0,
+    isread: 0
+  });
   comment_content.value = '';
 }
 
@@ -115,7 +137,6 @@ const changelike = async () => {
     isPraise.value = true;
     proxy.$message({ type: 'success', message: '点赞成功' })
   }
-  getDetailarticle()
 }
 
 const changeComment = async (newState: any) => {
@@ -153,7 +174,6 @@ const changeComment = async (newState: any) => {
     }
     proxy.$message({ type: 'success', message: '点赞成功' })
   }
-  getDetailarticle()
 }
 
 const backTo = () => {
@@ -190,12 +210,12 @@ watch(isOverlay, (val) => {
     try {
       document.documentElement.style.overflow = 'hidden'
       document.body.style.overflow = 'hidden'
-    } catch {}
+    } catch { }
   } else {
     try {
       document.documentElement.style.overflow = ''
       document.body.style.overflow = ''
-    } catch {}
+    } catch { }
   }
 }, { immediate: true })
 
@@ -203,7 +223,7 @@ onBeforeUnmount(() => {
   try {
     document.documentElement.style.overflow = ''
     document.body.style.overflow = ''
-  } catch {}
+  } catch { }
 })
 </script>
 
@@ -300,13 +320,18 @@ onBeforeUnmount(() => {
   overflow: auto;
   pointer-events: none; // 禁止背景接收事件，所有交互都在覆盖层
   /* 隐藏背景层的原生滚动条（仍可滚动） */
-  scrollbar-width: none;           /* Firefox */
-  -ms-overflow-style: none;        /* IE 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
 }
-.overlay-bg::-webkit-scrollbar {   /* Chrome/Safari/Edge(Chromium) */
+
+.overlay-bg::-webkit-scrollbar {
+  /* Chrome/Safari/Edge(Chromium) */
   width: 0;
   height: 0;
 }
+
 .model-mask {
   position: fixed;
   top: 0;
@@ -543,10 +568,13 @@ onBeforeUnmount(() => {
 /* 隐藏 yk-scrollbar 内部可滚动容器的原生滚动条（仍可滚动） */
 /* 深度选择器匹配到组件内部生成的 wrap 元素 */
 ::v-deep(.yk-scrollbar__wrap) {
-  scrollbar-width: none;    /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
 }
-::v-deep(.yk-scrollbar__wrap::-webkit-scrollbar) { 
+
+::v-deep(.yk-scrollbar__wrap::-webkit-scrollbar) {
   /* Chrome/Safari/Edge(Chromium) */
   width: 0;
   height: 0;

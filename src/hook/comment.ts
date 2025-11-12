@@ -27,5 +27,5 @@ export const addComment = async (data: ReqAddComment) => {
   if (res.code !== 200) {
     return { code: res.code, error: '添加评论失败' };
   }
-  return { code: res.code };
+  return { code: res.code, data: res.data};
 }

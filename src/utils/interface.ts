@@ -57,6 +57,7 @@ export type articleData = {
   praise: number;//点赞次数
   content?: string | string[] | undefined | Photo[];//内容
   isPraise: boolean;//是否点赞
+  classify?: number;//类别
 }
 
 export type ResArticleData = Code & {
