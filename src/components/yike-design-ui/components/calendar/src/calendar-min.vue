@@ -6,12 +6,6 @@ import { calendarProps, calendarEmits } from './calendar'
 import ykButton from '../../button'
 import YkSpace from '../../space'
 import dayjs from 'dayjs'
-import {
-  IconLeftOutline,
-  IconRightOutline,
-  IconLeft1Outline,
-  IconRight1Outline,
-} from '../../svg-icon'
 
 defineOptions({
   name: 'YkCalendar',
@@ -50,42 +44,32 @@ const {
     <div :class="bem('header')">
       <slot name="header" :data="getHeadeSlotData()">
         <yk-space size="s" align="center">
-          <yk-button
+          <!-- <yk-button
             type="outline"
             size="s"
             shape="square"
             @click="selectDate('prev-year')"
-          >
-            <IconLeft1Outline />
+          > -->
+          <!-- <IconLeft1Outline /> -->
+          <!-- </yk-button> -->
+          <yk-button style="border: 0;" type="outline" size="s" shape="square" @click="selectDate('prev-month')">
+            <IconLeftFill />
           </yk-button>
-          <yk-button
-            type="outline"
-            size="s"
-            shape="square"
-            @click="selectDate('prev-month')"
-          >
-            <IconLeftOutline />
+          <div :class="bem('title')" style="margin: 0px;width: 160px;text-align: center;font-size: 20px;line-height: 1.4;">{{ currentDate }}</div>
+          <yk-button style="border: 0;" type="outline" size="s" shape="square" @click="selectDate('next-month')">
+            <IconRightFill />
           </yk-button>
-          <div :class="bem('title')">{{ currentDate }}</div>
-          <yk-button type="outline" size="s" @click="selectDate('tody')">
+          <yk-text style="cursor: pointer;position: absolute; right: -48px;" @click="selectDate('tody')">
             今天
-          </yk-button>
-          <yk-button
-            type="outline"
-            size="s"
-            shape="square"
-            @click="selectDate('next-month')"
-          >
-            <IconRightOutline />
-          </yk-button>
-          <yk-button
+          </yk-text>
+          <!-- <yk-button
             type="outline"
             size="s"
             shape="square"
             @click="selectDate('next-year')"
-          >
-            <IconRight1Outline />
-          </yk-button>
+          > -->
+          <!-- <IconRight1Outline /> -->
+          <!-- </yk-button> -->
         </yk-space>
       </slot>
     </div>
@@ -98,12 +82,7 @@ const {
         </thead>
         <tbody>
           <tr v-for="(row, rid) in rows" :key="rid">
-            <td
-              v-for="(cell, cid) in row"
-              :key="cid"
-              :class="[btaday(), getCellClass(cell)]"
-              @click="handlePick(cell)"
-            >
+            <td v-for="(cell, cid) in row" :key="cid" :class="[btaday(), getCellClass(cell)]" @click="handlePick(cell)">
               <slot name="date-cell" :data="getSlotData(cell)">
                 <p>{{ cell.text }}</p>
               </slot>

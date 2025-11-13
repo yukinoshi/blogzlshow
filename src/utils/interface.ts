@@ -144,3 +144,26 @@ export type ReqNoLikeComment = {
   commentId: number;
   userId: string;
 }
+
+export type ReqDiary = PageType & {
+  serchTerm?: string | number;//搜索词条
+}
+
+export type ReqDiaryByDate = {
+  year: string | number;
+  month: string | number;
+  day?: string | number;
+}
+
+export type diaryData = {
+  id: number;
+  title: string;
+  content: string;
+  picture: string;
+  weather_id: number;
+  moment: string;
+}
+
+export type ResDiaryData = Code & {
+  data: diaryData[];
+}
