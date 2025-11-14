@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useThemeStore } from '../../store/theme';
+import { goToBilibili, goToGithub } from '../../utils/gotolink';
 
 const useTheme = useThemeStore()
 const downMove = () => {
@@ -28,6 +29,11 @@ const downMove = () => {
       <div class="down-btn" @click="downMove">
         <IconArrowDownOutline class="downarrow" />
       </div>
+      <yk-space size="s" class="link" align="center">
+        <yk-text>相关地址</yk-text>
+        <IconBilibiliFill @click="goToBilibili" />
+        <IconGithubFill @click="goToGithub" />
+      </yk-space>
     </div>
   </div>
 </template>
@@ -59,6 +65,30 @@ const downMove = () => {
         height: 32px;
         color: @bg-color-m;
         animation: example 3s infinite ease;
+      }
+    }
+
+    .link {
+      position: absolute;
+      bottom: 0px;
+      left: -80px;
+
+      .yk-icon {
+        fill: currentcolor;
+        font-size: inherit;
+        width: 32px;
+        height: 32px;
+        padding: 7px;
+        border-radius: 12px;
+        background-color: @gray-1;
+        cursor: pointer;
+        transition: all .2s;
+        border: 1px solid transparent;
+      }
+
+      .yk-icon:hover {
+        border-color: @pcolor;
+        color: @pcolor;
       }
     }
   }
@@ -113,13 +143,16 @@ const downMove = () => {
       font-size: 64px;
       font-weight: 500;
     }
+
     @keyframes example {
       0% {
         transform: translateY(0px);
       }
+
       50% {
         transform: translateY(16px);
       }
+
       100% {
         transform: translateY(0px);
       }

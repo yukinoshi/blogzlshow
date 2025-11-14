@@ -3,10 +3,12 @@ import homeData from "./homeData.vue";
 import homeArticle from "./homeArticle.vue";
 import homeGallery from "./homeGallery.vue";
 import homeDiary from "./homeDiary.vue";
+import homeFeedback from "./homefeedback.vue";
 export {
     banner,
     homeData,
     homeArticle,
     homeGallery,
     homeDiary,
+    homeFeedback
 };

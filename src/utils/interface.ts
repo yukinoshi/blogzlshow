@@ -167,3 +167,16 @@ export type diaryData = {
 export type ResDiaryData = Code & {
   data: diaryData[];
 }
+
+export type ReqsendMessage = {
+  userName: string;
+  userId: number;
+  content: string;
+  moment: string;
+  userType: number;
+}
+
+export type ReqsendMessageFront = {
+  content: string;
+  userName: string;
+}
