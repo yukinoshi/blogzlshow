@@ -84,10 +84,15 @@ export type ReqLikeArticleFront = {
 }
 
 export type SubsetData = {
-  id: 1;
+  id: number;
   subset_name: string;
   classify: number;
   moment: string;
+  value: number;
+}
+
+export type ReqGetSubset = {
+  classify: number;//类别
 }
 
 export type ReqGetSubsetById = {

@@ -21,7 +21,7 @@ const isMore = ref(true);
 const NeedRenderCount = ref(usearticle.count);
 
 const getSubsetList = async (count: boolean) => {
-  const res = await getArticle({ count, subsetId: subsetId.value, nowPage: nowPage.value, pageSize: pageSize, classify: 0 })
+  const res = await getArticle({ count, subsetId: subsetId.value, nowPage: nowPage.value, pageSize: pageSize, classify: 1 })
   if (count) {//第一次加载
     usearticle.count = res.data!.count;
     NeedRenderCount.value = usearticle.count;
@@ -44,7 +44,7 @@ const changeSubset = async (e: number) => {
     isMoreCheck();
     return;
   }
-  const res = await getArticle({ subsetId: subsetId.value, nowPage: nowPage.value, pageSize: pageSize, classify: 0 })
+  const res = await getArticle({ subsetId: subsetId.value, nowPage: nowPage.value, pageSize: pageSize, classify: 1 })
   RenderarticleList.value = res.data!.list;
   NeedRenderCount.value = res.data!.count;
   isMoreCheck();
@@ -75,7 +75,7 @@ onMounted(() => {
   <div class="view-inner">
     <div class="share-view">
       <div class="share">
-        <SubsetBar :classify="Number(0)" :totalcount="usearticle.count" @changeSubset="changeSubset" />
+        <SubsetBar :classify="Number(1)" :totalcount="usearticle.count" @changeSubset="changeSubset" />
         <div class="blog">
           <ArticleItem v-for="item in RenderarticleList" :key="item.id" :article="item" />
         </div>

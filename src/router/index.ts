@@ -3,6 +3,7 @@ import HomeView from "../components/views/HomeView.vue";
 import indexView from "../components/views/indexView.vue";
 import articleDetails from "../components/article/article-details.vue";
 import BlogView from "../components/views/BlogView.vue";
+import GalleryView from "../components/views/GalleryView.vue";
 const routes = [
   {
     path: '/',
@@ -14,6 +15,9 @@ const routes = [
       },
       {
         path: 'blog', component: BlogView
+      },
+      {
+        path: 'gallery', component: GalleryView
       }
     ]
   },
