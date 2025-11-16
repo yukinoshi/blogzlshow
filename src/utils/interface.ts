@@ -12,6 +12,11 @@ export type PageType = {
   count?: boolean;//是否返回总条数
 }
 
+export type Picture = {
+  id: number;
+  url: string;
+}
+
 export type VisitsData = Code & {
   data: {
     count: number;
@@ -167,6 +172,13 @@ export type diaryData = {
   picture: string;
   weather_id: number;
   moment: string;
+}
+
+export type ResDiaryDataPage = Code & {
+  data: {
+    count: number;
+    list: diaryData[];
+  }
 }
 
 export type ResDiaryData = Code & {

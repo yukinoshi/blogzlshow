@@ -5,5 +5,6 @@ import FootBar from "./FootBar.vue";
 import SubsetBar from "./SubsetBar.vue";
 import NextPageBar from "./NextPageBar.vue";
 import EmptyBar from "./EmptyBar.vue";
+import FeedBack from "./FeedBack.vue";
 
-export { TopBar, TitleBar, MoreBar, FootBar, SubsetBar, NextPageBar, EmptyBar };
+export { TopBar, TitleBar, MoreBar, FootBar, SubsetBar, NextPageBar, EmptyBar, FeedBack };

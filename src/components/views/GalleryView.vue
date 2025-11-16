@@ -33,7 +33,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="view-inner">
+  <div class="layout-inner">
     <div class="share-view">
       <div class="share">
         <SubsetBar :classify="Number(1)" :totalcount="allcount" @changeSubset="changeSubset" />
@@ -48,26 +48,11 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="less" scoped>
-.view-inner {
-  min-width: 1240px;
-  max-width: 1480px;
-  margin: 0 auto 96px;
-
-  .share-view {
-    padding-top: 88px;
-
-    .share {
-      width: 100%;
-      min-height: 640px;
-
-      .gallery {
-        padding-top: 32px;
-        display: grid;
-        grid-template-columns: minmax(320px, 600px) minmax(320px, 600px) minmax(320px, 600px) minmax(320px, 600px);
-        gap: 32px;
-        justify-content: center;
-      }
-    }
-  }
+.gallery {
+  padding-top: 32px;
+  display: grid;
+  grid-template-columns: minmax(320px, 600px) minmax(320px, 600px) minmax(320px, 600px) minmax(320px, 600px);
+  gap: 32px;
+  justify-content: center;
 }
 </style>

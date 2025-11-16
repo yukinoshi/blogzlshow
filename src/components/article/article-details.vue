@@ -1,25 +1,18 @@
 <script setup lang="ts">
-import { getCurrentInstance, onMounted, ref, watch, shallowRef, computed } from 'vue';
-import { onBeforeUnmount } from 'vue';
+import { getCurrentInstance, onMounted, ref, watch, shallowRef, computed, onBeforeUnmount } from 'vue';
 import commentItem from '../comment/comment-item.vue';
 import { useRoute } from 'vue-router';
 import { getArticleById } from '../../hook/article';
-import type { articleData, commentData } from '../../utils/interface';
+import type { articleData } from '../../utils/interface';
 import { labelString } from '../../hook/labelString';
 import { subsetString } from '../../hook/subsetString';
-import { addComment, getCommentData } from '../../hook/comment';
-import { momentm } from '../../utils/moment';
+import { getCommentData } from '../../hook/comment';
 import { addPraise, addPraiseComment, deletePraise, deletePraiseComment } from '../../hook/praise';
-import TopBar from '../bar/TopBar.vue';
+import { TopBar, FeedBack } from '../bar';
 import { spellImage } from '../../hook/spelimg';
+import { useFeedback } from '../../hook/feedback';
 
 const proxy: any = getCurrentInstance()?.proxy
-
-const isSubmit = ref(false);
-
-const username = ref<string>('访客');
-
-const comment_content = ref<string>('');
 
 const route = useRoute();
 
@@ -28,8 +21,6 @@ const article = ref<articleData>({} as articleData);
 const subsetName = ref<string>('');
 
 const contentHtml = ref<string>('')
-
-const comments = ref<commentData[]>([])
 
 const isPraise = ref<boolean>(false);
 
@@ -93,27 +84,7 @@ const getDetailarticle = async () => {
   comments.value.sort((a, b) => b.praise - a.praise);
 }
 
-const submitComment = async () => {
-  const res = await addComment({
-    articleId: Number(effectiveId.value),
-    userName: username.value,
-    content: comment_content.value,
-    moment: momentm(new Date())
-  })
-  comments.value.push({
-    id: res.data!, // 使用后端返回的评论 ID
-    article_id: Number(effectiveId.value),
-    user_name: username.value,
-    content: comment_content.value,
-    moment: momentm(new Date()),
-    praise: 0,
-    isPraise: false,
-    user_id: '-1',
-    complaint: 0,
-    isread: 0
-  });
-  comment_content.value = '';
-}
+const { username, comment_content, isSubmit, comments, submitComment, } = useFeedback({articleId: effectiveId.value});
 
 const changelike = async () => {
   if (isPraise.value) { //取消点赞
@@ -181,13 +152,6 @@ const backTo = () => {
   window.history.back();
 }
 
-watch(comment_content, (newVal) => {
-  if (newVal && newVal.length > 0) {
-    isSubmit.value = false;
-  } else {
-    isSubmit.value = true;
-  }
-}, { immediate: true });
 
 const handleScroll = (e: any) => {
   top.value = e.target.scrollTop;
@@ -277,21 +241,8 @@ onBeforeUnmount(() => {
           </div>
           <div class="comment-list">
             <div class="comment-list-main">
-              <div class="feedback">
-                <yk-space dir="vertical" size="m">
-                  <yk-text-area v-model="comment_content" placeholder="说点什么..." :auto-size="{
-                    minRows: 4,
-                    maxRows: 10,
-                  }" style="width: 736px;"></yk-text-area>
-                  <div class="feedback-submit">
-                    <yk-space align="center" size="s">
-                      <yk-input v-model="username" placeholder="用户名" style="width: 160px;"></yk-input>
-                      <yk-avatar img-url="https://huohuo90.com/images/avatar.png"></yk-avatar>
-                    </yk-space>
-                    <yk-button type="primary" :disabled="isSubmit" size="m" @click="submitComment">评论</yk-button>
-                  </div>
-                </yk-space>
-              </div>
+              <FeedBack :width="736" v-model:comment_content="comment_content" v-model:username="username"
+                :isSubmit="isSubmit" @submitComment="submitComment" />
               <p class="comment-list-title">
                 评论 {{ article.comment }}
               </p>
@@ -518,35 +469,6 @@ onBeforeUnmount(() => {
       border-radius: 8px;
       background-color: @bg-color-m;
       padding: 32px;
-
-      .feedback {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-
-        .yk-text-area:hover,
-        .yk-text-area--focus {
-          border-color: @gray-8
-        }
-
-        .yk-text-area--focus {
-          background-color: @bg-color-m;
-        }
-
-        &-submit {
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-
-          .yk-button {
-            background-color: @lcolor-light;
-          }
-
-          .yk-button:hover {
-            background-color: @gray-9;
-          }
-        }
-      }
     }
 
     &-title {

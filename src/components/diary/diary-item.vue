@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { spellImage } from '../../hook/spelimg';
 import type { diaryData } from '../../utils/interface';
 import { weathers } from '../../utils/weather';
@@ -6,6 +7,15 @@ import { weathers } from '../../utils/weather';
 const props = defineProps<{
   diary: diaryData
 }>()
+
+const weathIcon = spellImage(weathers[props.diary.weather_id]?.icon);
+
+const Pictures = computed(() => {
+  if (!props.diary.picture) {
+    return [];
+  }
+  return JSON.parse(props.diary.picture);
+})
 
 </script>
 
@@ -16,13 +26,16 @@ const props = defineProps<{
       <p class="title">{{ diary.title }}</p>
       <yk-space size="s">
         <p style="font-size: 16px;">{{ diary.moment }}</p>
-        <img :src="spellImage(weathers[diary.weather_id]?.icon)" />
+        <img :src="weathIcon" />
       </yk-space>
     </div>
     <yk-scrollbar ref="scrollbar" height="680px" class="diary-item-content">
       <div class="content">
         <div class="content-main">{{ diary.content }}</div>
       </div>
+      <yk-space v-if="Pictures.length > 0">
+        <yk-image v-for="item in Pictures" :src="spellImage(item.url)" width="160" height="200"></yk-image>
+      </yk-space>
     </yk-scrollbar>
   </div>
 </template>
@@ -85,7 +98,21 @@ const props = defineProps<{
       background-image: url(https://huohuo90.com/images/bg.png);
       background-size: 12px 42px;
     }
+
+  }
+
+  .yk-space {
+    gap: 16px 16px;
+    padding: 32px 0;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .yk-image {
+    border-radius: 0;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 8px #0000001f;
+    box-sizing: content-box;
   }
 }
-
 </style>

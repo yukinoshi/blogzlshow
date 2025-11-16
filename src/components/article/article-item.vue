@@ -3,7 +3,7 @@ import { labelString } from '../../hook/labelString';
 import { spellImage } from '../../hook/spelimg';
 import { subsetString } from '../../hook/subsetString';
 import type { articleData } from '../../utils/interface';
-import { onMounted, ref, type PropType } from 'vue';
+import { computed, onMounted, ref, type PropType } from 'vue';
 import { useOverlayStore } from '../../store/overlay'
 
 const props = defineProps({
@@ -21,6 +21,8 @@ const overlayStore = useOverlayStore()
 
 const subsetName = ref<string>('');
 
+const Imagecount = computed(() => JSON.parse(props.article.content as string).length);
+
 // 跳转到详情页（覆盖层显示在 HomeView 上方，不销毁 HomeView）
 const goToDetail = (articleId: number) => {
   // 打开覆盖层
@@ -32,6 +34,8 @@ const goToDetail = (articleId: number) => {
 
 onMounted(async () => {
   const subsetId = props.article.subset_id;
+  console.log();
+
   if (typeof subsetId === 'number') {
     subsetName.value = await subsetString({ value: [{ id: props.article.subset_id || 0 }] });
   }
@@ -69,7 +73,7 @@ onMounted(async () => {
   <div v-else class="gallery-card" :style="`background-image: url('${spellImage(article.cover)}')`"
     @click="goToDetail(article.id)">
     <div class="gallery-card-more">
-      <p>4</p>
+      <p>{{ Imagecount }}</p>
     </div>
     <yk-space class="gallery-card-main" dir="vertical" :size="8">
       <p class="title">{{ article.title }}</p>
