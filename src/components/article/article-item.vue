@@ -10,6 +10,10 @@ const props = defineProps({
   article: {
     type: Object as PropType<articleData>,
     default: () => ({} as articleData)
+  },
+  classify: {
+    type: Number,
+    default: 0
   }
 })
 
@@ -35,7 +39,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <yk-space size="s" class="article-item" dir="vertical" @click="goToDetail(props.article.id)">
+  <yk-space v-if="classify === 0" size="s" class="article-item" dir="vertical" @click="goToDetail(props.article.id)">
     <yk-space size="m" align="center" style="margin-top: -52px;">
       <yk-image :src="spellImage(props.article.cover)" width="160" height="120" :is-lazy="true"
         :preview="false"></yk-image>
@@ -61,6 +65,17 @@ onMounted(async () => {
       </yk-space>
     </div>
   </yk-space>
+
+  <div v-else class="gallery-card" :style="`background-image: url('${spellImage(article.cover)}')`"
+    @click="goToDetail(article.id)">
+    <div class="gallery-card-more">
+      <p>4</p>
+    </div>
+    <yk-space class="gallery-card-main" dir="vertical" :size="8">
+      <p class="title">{{ article.title }}</p>
+      <p class="introduce">{{ article.introduce }}</p>
+    </yk-space>
+  </div>
 </template>
 
 <style lang="less" scoped>
@@ -107,5 +122,79 @@ onMounted(async () => {
 .yk-drawer__header {
   width: 0;
   height: 0;
+}
+
+.gallery-card {
+  width: 100%;
+  height: 472px;
+  background-color: var(--gray1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  opacity: .88;
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    opacity: 1;
+
+    .gallery-card-main {
+      padding-top: 24px;
+
+      .introduce {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-more {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 32px;
+    height: 32px;
+    background-color: #0000003d;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      color: @white;
+    }
+  }
+
+  &-main {
+    position: absolute;
+    height: 168px;
+    width: 100%;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    padding: 120px 24px 0;
+    transition: all .2s;
+    background-image: linear-gradient(180deg, #0000, #0000008f);
+
+    .title {
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .introduce {
+      color: #fff;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      transition: all .2s;
+      opacity: 0;
+    }
+  }
 }
 </style>

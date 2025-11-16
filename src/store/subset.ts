@@ -8,5 +8,4 @@ export const usesubsetStore = defineStore('subsetStore', {
   }),
   actions: {
   },
-  persist: true,
 })
