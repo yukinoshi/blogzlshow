@@ -12,8 +12,9 @@ const { username, comment_content, isSubmit, submitFeedback } = useFeedback();
 
 const { diaryDates, hasMore, RenderDiary, fetchDiary, loadMore, changeDiary } = useDiary({ pageSize })
 
-onMounted(() => {
-  fetchDiary({ includeCount: true, reset: true });
+onMounted( async () => {
+  await fetchDiary({ includeCount: true, reset: true });
+  console.log(RenderDiary.value);
 });
 </script>
 

@@ -80,7 +80,7 @@ export const useDiary = (options: UseDiaryOptions = {}) => {
   const loadMore = async () => {
     if (!hasMore.value) return;
     nowPage.value += 1;
-    await fetchDiary({ includeCount: false, reset: false });
+    await fetchDiary({ includeCount: true, reset: true });
   }
 
   return {

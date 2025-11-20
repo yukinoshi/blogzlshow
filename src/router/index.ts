@@ -5,6 +5,7 @@ import articleDetails from "../components/article/article-details.vue";
 import BlogView from "../components/views/BlogView.vue";
 import GalleryView from "../components/views/GalleryView.vue";
 import DiaryView from "../components/views/DiaryView.vue";
+import ResourceView from "../components/views/ResourceView.vue";
 const routes = [
   {
     path: '/',
@@ -22,6 +23,9 @@ const routes = [
       },
       {
         path: 'diary', component: DiaryView
+      },
+      {
+        path: 'resource', component: ResourceView
       }
     ]
   },

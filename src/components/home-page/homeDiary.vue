@@ -50,7 +50,7 @@ const getDiarybyM = async () => {
 
 onMounted(async () => {
   await getDiarybyM();
-  Rediary.value = diaryDatas.value[0];
+  Rediary.value = diaryDatas.value[0];  
 });
 
 </script>

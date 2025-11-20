@@ -197,3 +197,27 @@ export type ReqsendMessageFront = {
   content: string;
   userName: string;
 }
+
+export type ReqResourcePage = PageType & {
+  subsetId?: number;//分组
+  serchTerm?: string | number;//搜索词条
+}
+
+export type ResourceData = {
+  id: number;
+  title: string;
+  subset_id?: number;
+  url: string;//资源链接
+  introduce?: string;//简介 
+  password: string;//提取码
+  format: string;//资源格式
+  cover?: string;//封面地址
+  downloads?: number;//下载次数
+}
+
+export type ResResourceData = Code & {
+  data: {
+    count: number;
+    list: ResourceData[];
+  }
+}
