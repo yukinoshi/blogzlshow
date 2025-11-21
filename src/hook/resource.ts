@@ -12,8 +12,6 @@ type FetchOptions = {
   reset: boolean;
 }
 
-
-
 export const useResourceList = (options: UseArticleListOptions = {}) => {
   const pageSize = options.pageSize ?? 8;
   const subsetId = ref<number>(options.initialSubsetId ?? -2);

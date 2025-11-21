@@ -2,7 +2,7 @@
 import { ref, watch } from 'vue';
 import type { commentData } from '../../utils/interface';
 
-const emits = defineEmits(['changeComment'])
+const emits = defineEmits(['changeComment', 'reportComment']);
 
 const props = defineProps<{ data: commentData }>();
 
@@ -10,6 +10,10 @@ const isPraise = ref<boolean>(props.data.isPraise || false);
 
 const likeComment = async () => {
   emits('changeComment', { id: props.data.id, is: isPraise.value })
+}
+
+const reportComment = async () => {
+  emits('reportComment', props.data.id);
 }
 
 watch(
@@ -35,7 +39,7 @@ watch(
         <div class="comment-bar">
           <yk-space size="s">
             <p class="report control">
-              <IconHintOutline />
+              <IconHintOutline @click="reportComment" />
               举报
             </p>
             <p class="control" @click="likeComment" :class="{ isLike: isPraise }">

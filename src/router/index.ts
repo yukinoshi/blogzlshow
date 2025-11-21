@@ -6,6 +6,8 @@ import BlogView from "../components/views/BlogView.vue";
 import GalleryView from "../components/views/GalleryView.vue";
 import DiaryView from "../components/views/DiaryView.vue";
 import ResourceView from "../components/views/ResourceView.vue";
+import SearchView from "../components/views/SearchView.vue";
+import AboutView from '../components/views/AboutView.vue'
 const routes = [
   {
     path: '/',
@@ -28,6 +30,14 @@ const routes = [
         path: 'resource', component: ResourceView
       }
     ]
+  },
+  {
+    path: '/search',
+    component: SearchView,
+  },
+  {
+    path: '/about',
+    component: AboutView,
   },
   {
     path: '/article',

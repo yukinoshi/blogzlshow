@@ -11,6 +11,7 @@ import { addPraise, addPraiseComment, deletePraise, deletePraiseComment } from '
 import { TopBar, FeedBack } from '../bar';
 import { spellImage } from '../../hook/spelimg';
 import { useFeedback } from '../../hook/feedback';
+import { reportCommentApi } from '../../api/comment';
 
 const proxy: any = getCurrentInstance()?.proxy
 
@@ -147,6 +148,25 @@ const changeComment = async (newState: any) => {
   }
 }
 
+const reportComment = async (commentId: number) => {
+  // 举报评论 5min内只能举报一次
+  let timer;
+  if (timer) {
+    proxy.$message({ type: 'warning', message: '请勿频繁举报' });
+    return;
+  }
+  const res = await reportCommentApi(commentId);
+    if (res.code === 200) {
+    proxy.$message({ type: 'success', message: '举报成功，感谢您的反馈！' });
+  } else {
+    proxy.$message({ type: 'error', message: '举报失败，请稍后再试。' });
+  }
+  timer = setTimeout(() => {
+    timer = null;
+  }, 5 * 60 * 1000); // 5 minutes
+
+}
+
 const backTo = () => {
   //返回上一页
   window.history.back();
@@ -247,7 +267,7 @@ onBeforeUnmount(() => {
                 评论 {{ article.comment }}
               </p>
               <yk-space size="m" dir="vertical">
-                <commentItem @changeComment="changeComment" v-for="item in comments" :key="item.id" :data="item" />
+                <commentItem @reportComment="reportComment" @changeComment="changeComment" v-for="item in comments" :key="item.id" :data="item" />
               </yk-space>
               <div class="comment-list-more">
                 <yk-text type="third">已经到底了</yk-text>

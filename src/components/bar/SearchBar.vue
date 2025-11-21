@@ -1,18 +1,30 @@
 <script lang="ts" setup>
 import { onBeforeMount, onMounted, ref, watch } from 'vue';
-import { navLink } from '../../utils/menu'
+import { showNavLink } from '../../utils/menu'
 import { useRouter } from 'vue-router';
 import { useThemeStore } from '../../store/theme';
-import { goToSearch } from '../../utils/gotolink';
+
+const props = defineProps<{
+  scrollTop?: number,
+  searchTerm?: string
+}>()
 
 const isShow = ref(false)
 const router = useRouter()
 const useTheme = useThemeStore()
-const searchTerm = ref('');
+const searchTerm = ref(props.searchTerm || '');
+const searchIndex = ref(0);
 
-const props = defineProps<{
-  scrollTop?: number
+
+const emits = defineEmits<{
+  (e: 'update:searchIndex', value: number): void;
+  (e: 'update:searchTerm', value: string): void;
 }>()
+
+const changeIndex = (index: number) => {
+  searchIndex.value = index;
+  emits('update:searchIndex', index);
+}
 
 let nowTop = 0;
 //显示和隐藏顶部导航栏
@@ -50,6 +62,10 @@ const changeTheme = (isDark: boolean) => {
   useTheme.isDark = isDark;
 }
 
+const gotofind = () => {
+  emits('update:searchTerm', searchTerm.value);
+}
+
 watch(() => props.scrollTop, () => {//如果有详情页传入scrollTop
   retract()
   handleOpacityScroll()
@@ -70,39 +86,39 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div class="top-bar" :style="{ backdropFilter: `blur(${opacity * 8}px)` }" :class="{ show: isShow }">
-    <IconYike1Fill class="logo" @click="goPage('/')" />
-    <yk-space :size="56" class="nav-center">
-      <router-link v-for="(item, index) in navLink" :key="index" :to="item.path">
-        <yk-text>
-          {{ item.name }}
-        </yk-text>
-      </router-link>
-    </yk-space>
-    <yk-space align="center" size="m">
-      <yk-space size="s" align="center">
-        <yk-input v-model="searchTerm" @keyup.enter="goToSearch(searchTerm)" placeholder="文章/图库/日记/资源" />
-        <IconSearchOutline class="search" @click="goToSearch(searchTerm)" />
+  <div class="search-bar" :style="{ backdropFilter: `blur(${opacity * 8}px)` }" :class="{ show: isShow }">
+    <div class="search-bar-top">
+      <IconYike1Fill class="logo" @click="goPage('/')" />
+      <yk-space align="center" :size="56" class="nav-center" style="width: 40%;">
+        <yk-input v-model="searchTerm"  @keyup.enter="gotofind" placeholder="搜索文章或资源" style="width: 100%;" />
+        <IconSearchOutline class="search" @click="gotofind" />
+      </yk-space>
+      <yk-space align="center" size="m">
         <yk-theme @isDark="changeTheme" />
       </yk-space>
+    </div>
+    <yk-space :size="48">
+      <div v-for="(item, index) in showNavLink" :key="index">
+        <yk-text :class="{active: searchIndex === index}" @click="changeIndex(index)">
+          {{ item.name }}
+        </yk-text>
+      </div>
     </yk-space>
-    <div class="top-bar__bg" :style="{ opacity: opacity - 0.16 }"></div>
   </div>
 </template>
 
 <style lang="less" scoped>
-.top-bar {
-  width: 100%;
+.search-bar {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  height: 72px;
+  height: 100px;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
-  transition: all @animatb;
+  z-index: 10;
+  width: 100%;
+  background-color: @bg-color-m;
 
   :deep(.yk-input__inner.yk-input__inner--primary):hover {
     border-color: @gray-8;
@@ -110,6 +126,16 @@ onBeforeMount(() => {
 
   :deep(.yk-input__inner.yk-input__inner--primary--focus) {
     border-color: @gray-8 !important;
+    background: @bg-color-m;
+  }
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+    padding: 0 32px;
   }
 
   .logo {
@@ -128,6 +154,7 @@ onBeforeMount(() => {
   .yk-text {
     font-weight: 600;
     color: @font-color-m;
+    cursor: pointer;
 
     &:hover {
       color: @font-color-l;
@@ -136,7 +163,7 @@ onBeforeMount(() => {
     transition: all @animatb;
   }
 
-  .router-link-active {
+  .active {
     .yk-text {
       color: @font-color-l;
     }
@@ -155,21 +182,11 @@ onBeforeMount(() => {
     }
   }
 
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: @bg-color-m;
-    z-index: -1;
-  }
-
   .search {
     width: 16px;
     height: 16px;
     position: absolute;
-    right: 86px;
+    right: 20px;
     cursor: pointer;
   }
 }

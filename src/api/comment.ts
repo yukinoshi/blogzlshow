@@ -18,3 +18,11 @@ export const getCommentsByArticleIdApi = async (articleId: number, fingerprint: 
 export const addCommentApi = async (data: ReqAddComment) => {
   return await service.post('/addcomment', data) as Res;
 }
+/**
+ * 举报评论
+ * @param id 评论id
+ * @returns 返回code200代表成功
+ */
+export const reportCommentApi = async (id: number) => {
+  return await service.post('/reportcomment', { id }) as Res;
+}
