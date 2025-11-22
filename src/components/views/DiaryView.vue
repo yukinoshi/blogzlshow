@@ -14,7 +14,6 @@ const { diaryDates, hasMore, RenderDiary, fetchDiary, loadMore, changeDiary } = 
 
 onMounted( async () => {
   await fetchDiary({ includeCount: true, reset: true });
-  console.log(RenderDiary.value);
 });
 </script>
 
