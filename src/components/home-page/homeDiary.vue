@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import { TitleBar, MoreBar } from '../bar';
 import DiaryItem from '../diary/diary-item.vue';
-import { getDiaryByDate } from '../../hook/diary';
+import { getDiary, getDiaryByDate } from '../../hook/diary';
 import type { diaryData } from '../../utils/interface';
 import { momentm } from '../../utils/moment';
 
@@ -44,8 +44,19 @@ const getDiarybyM = async () => {
   if (res.code !== 200) {
     return;
   }
+  if (res.data.length === 0) {
+    res.data = await getDiaryFirst()
+  }
   diaryDatas.value = res.data;
   hasDiaryDates.value.push(...diaryDatas.value.map(item => item.moment));
+}
+
+const getDiaryFirst = async () => {
+  const res = await getDiary({
+    nowPage: 1,
+    pageSize: 1,
+  })
+  return res.data.list;
 }
 
 onMounted(async () => {
