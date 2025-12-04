@@ -3,20 +3,19 @@ import { ref, getCurrentInstance } from 'vue';
 import TopBar from '../bar/TopBar.vue';
 const proxy: any = getCurrentInstance()?.proxy
 
-// 模拟的技术栈数据，你可以换成图标组件
 const techStacks = [
   { name: 'Vue 3', desc: '渐进式 JavaScript 框架', color: '#42b883' },
   { name: 'TypeScript', desc: 'JavaScript 的超集', color: '#3178c6' },
-  { name: 'Node.js', desc: '后端服务运行时', color: '#339933' },
+  { name: 'Node.js', desc: '后端服务', color: '#339933' },
   { name: 'Vite', desc: '极速的前端构建工具', color: '#646cff' },
   { name: 'Less', desc: 'CSS 预处理语言', color: '#1d365d' },
   { name: 'MySQL', desc: '关系型数据库', color: '#4479a1' },
+  { name: 'Redis', desc: '键值数据库', color: '#d82c20' },
 ];
 
-// 站点运行时间计算
 const startTime = new Date('2025-09-11').getTime(); // 修改为你的开始时间
 const runDays = ref(Math.floor((Date.now() - startTime) / (1000 * 60 * 60 * 24)));
-//点击复制
+
 const copyEmail = () => {
   const email = '2972854873@qq.com';
   navigator.clipboard.writeText(email).then(() => {
@@ -62,7 +61,6 @@ const copyEmail = () => {
         <section class="section-card author">
           <h2>👨‍💻 关于作者</h2>
           <div class="avatar-box">
-            <!-- <img src="@/assets/avatar.jpg" alt="avatar" /> -->
             <div class="placeholder-avatar">Me</div>
           </div>
           <p class="author-name">邹礼</p>
