@@ -25,4 +25,18 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,          // 生产环境默认关闭，可按需打开
+    target: 'es2018',          // 兼顾现代浏览器
+    minify: 'esbuild',
+    chunkSizeWarningLimit: 1024,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vue: ['vue', 'vue-router', 'pinia'],
+        },
+      },
+    },
+  },
 })

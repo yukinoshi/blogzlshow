@@ -14,37 +14,29 @@ export const momentm = (data: Date) => {
 }
 
 export const time = (data: Date) => {
-  let d = new Date(data);
-  let h = d.getHours();
-  let m: string = d.getMinutes()
-  let s = d.getSeconds()
-  if (h < 10) {
-    h = '0' + h;
-  }
-  if (parseInt(m) < 10) {
-    m = '0' + m;
-  }
-  if (s < 10) {
-    s = '0' + s;
-  }
-  let tiems = h + ':' + m + ':' + s;
+  const d = new Date(data);
+  const h = d.getHours().toString().padStart(2, '0');
+  const m = d.getMinutes().toString().padStart(2, '0');
+  const s = d.getSeconds().toString().padStart(2, '0');
+  const tiems = `${h}:${m}:${s}`;
   return tiems;
 }
 
 export const momentml = (data: Date | string | number) => {
-  let time;
-  let d = new Date(data);
-  let n = new Date();
-  let dd = d.getTime();
-  let h = d.getHours();
-  let m = d.getMinutes();
-  let Y = d.getFullYear();
-  let M = d.getMonth() + 1;
-  let D = d.getDate();
-  let nn = n.getTime();
-  let YY = n.getFullYear();
-  let MM = n.getMonth() + 1;
-  let DD = n.getDate();
+  let time: string;
+  const d = new Date(data);
+  const n = new Date();
+  const dd = d.getTime();
+  const nn = n.getTime();
+
+  const hNum = d.getHours();
+  const mNum = d.getMinutes();
+  const Y = d.getFullYear();
+  const MNum = d.getMonth() + 1;
+  const DNum = d.getDate();
+  const YY = n.getFullYear();
+  const MM = n.getMonth() + 1;
+  const DD = n.getDate();
 
   if ((nn - dd) < 120 * 1000) {
     time = '刚刚';
@@ -52,40 +44,23 @@ export const momentml = (data: Date | string | number) => {
   } else if ((nn - dd) <= 3600 * 1000) {
     time = Math.floor((nn - dd) / (60 * 1000)) + '分钟前';
     return time;
-  } else if (60 * 60 * 1000 < (nn - dd) && (YY === Y) && (MM === M) && (DD === D) ) {
-    if (m < 10) {
-      m = '0' + m;
-    }
-    time= h + ':' + m;
+  } else if (60 * 60 * 1000 < (nn - dd) && (YY === Y) && (MM === MNum) && (DD === DNum) ) {
+    const h = hNum.toString().padStart(2, '0');
+    const m = mNum.toString().padStart(2, '0');
+    time = h + ':' + m;
     return time;
   } else if (YY === Y) {
-    if (M < 10) {
-      M = '0' + M;
-    } 
-    if (D < 10) {
-      D = '0' + D;
-    }
-    if (h < 10) {
-      h = '0' + h;
-    }
-    if (m < 10) {
-      m = '0' + m;
-    }
+    const M = MNum.toString().padStart(2, '0');
+    const D = DNum.toString().padStart(2, '0');
+    const h = hNum.toString().padStart(2, '0');
+    const m = mNum.toString().padStart(2, '0');
     time = M + '/' + D + ' ' + h + ':' + m;
     return time;
   } else {
-    if (M < 10) {
-      M = '0' + M;
-    }
-    if (D < 10) {
-      D = '0' + D;
-    }
-    if (h < 10) {
-      h = '0' + h;
-    }
-    if (m < 10) {
-      m = '0' + m;
-    }
+    const M = MNum.toString().padStart(2, '0');
+    const D = DNum.toString().padStart(2, '0');
+    const h = hNum.toString().padStart(2, '0');
+    const m = mNum.toString().padStart(2, '0');
     time = Y + '/' + M + '/' + D + ' ' + h + ':' + m;
     return time;
   }
