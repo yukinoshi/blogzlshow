@@ -91,7 +91,7 @@ const getDetailarticle = async () => {
     contentHtml.value = String(res.data?.content || '')
     // 获取 AI 摘要并逐字显示
     try {
-      const reply: any = await getAiReplyApi(contentHtml.value)
+      const reply: any = await getAiReplyApi({message: contentHtml.value, articleId: Number(articleId)});
       if (reply) {
         await typeWriter(reply, 25)
       }

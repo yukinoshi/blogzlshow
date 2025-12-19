@@ -222,6 +222,10 @@ export type ResResourceData = Code & {
   }
 }
 
-export type AiReply = {
-  summary: string;
+export type AiReplyData = {
+  message: string;
+}
+
+export type ReqAiSummary = AiReplyData & {
+  articleId: number;
 }
