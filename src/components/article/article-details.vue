@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getCurrentInstance, onMounted, ref, watch, shallowRef, computed, onBeforeUnmount } from 'vue';
+import { getCurrentInstance, onMounted, ref, watch, computed, onBeforeUnmount } from 'vue';
 import commentItem from '../comment/comment-item.vue';
 import { useRoute } from 'vue-router';
 import { getArticleById } from '../../hook/article';
@@ -12,6 +12,7 @@ import { TopBar, FeedBack } from '../bar';
 import { spellImage } from '../../hook/spelimg';
 import { useFeedback } from '../../hook/feedback';
 import { reportCommentApi } from '../../api/comment';
+import { getAiReplyApi } from '../../api/ai';
 
 const proxy: any = getCurrentInstance()?.proxy
 
@@ -22,13 +23,24 @@ const article = ref<articleData>({} as articleData);
 const subsetName = ref<string>('');
 
 const contentHtml = ref<string>('')
+// AI 摘要逐字显示
+const aiText = ref<string>('')
+const aiTyping = ref<boolean>(false)
+
+const typeWriter = async (text: string, speed = 30) => {
+  aiTyping.value = true
+  aiText.value = ''
+  for (const ch of text) {
+    aiText.value += ch
+    await new Promise(r => setTimeout(r, speed))
+  }
+  aiTyping.value = false
+}
 
 const isPraise = ref<boolean>(false);
 
 const props = defineProps<{ articleId?: number; overlay?: boolean }>()
 const isOverlay = ref<boolean>(false);
-
-const scrollbar = shallowRef()
 
 const top = ref<number>(0);
 
@@ -77,6 +89,15 @@ const getDetailarticle = async () => {
   } else {//是文章
     // 把字符串转化为 html（已由后端或编辑器生成），使用 v-html 渲染并保证已清洗
     contentHtml.value = String(res.data?.content || '')
+    // 获取 AI 摘要并逐字显示
+    try {
+      const reply: any = await getAiReplyApi(contentHtml.value)
+      if (reply) {
+        await typeWriter(reply, 25)
+      }
+    } catch (e) {
+      // ignore AI 摘要失败
+    }
   }
   isPraise.value = res.data?.isPraise || false;
   const comment = await getCommentData(Number(articleId));
@@ -245,6 +266,10 @@ onBeforeUnmount(() => {
             </div>
             <div class="article-introduce">
               <p>{{ article.introduce }}</p>
+            </div>
+            <div v-if="aiText" class="ai-summary">
+              <p class="ai-summary-title">AI 摘要</p>
+              <p class="ai-summary-text">{{ aiText }}</p>
             </div>
             <div class="article-content">
               <div class="article-content-article" style="width: 800px;" v-html="contentHtml">
@@ -505,6 +530,23 @@ onBeforeUnmount(() => {
       justify-content: center;
     }
   }
+}
+
+.ai-summary {
+  margin: 12px 0 0;
+  padding: 12px 14px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+}
+.ai-summary-title {
+  margin: 0 0 6px;
+  font-weight: 600;
+  color: #666;
+}
+.ai-summary-text {
+  white-space: pre-wrap;
+  line-height: 1.6;
 }
 
 /* 隐藏 yk-scrollbar 内部可滚动容器的原生滚动条（仍可滚动） */

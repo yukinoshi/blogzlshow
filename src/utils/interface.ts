@@ -221,3 +221,7 @@ export type ResResourceData = Code & {
     list: ResourceData[];
   }
 }
+
+export type AiReply = {
+  summary: string;
+}
